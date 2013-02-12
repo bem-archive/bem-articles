@@ -21,21 +21,27 @@ structure.<br/>
 We intend to use the full power of BEM technologies, so this
 [project-stub](https://github.com/bem/project-stub) will suit you just fine.
 
+```js
     $ git clone git://github.com/bem/project-stub.git my-pretty-project
     $ cd my-pretty-project/
     $ rm -rf .git
     $ git init
+```
 
 Build the project by running a `make` command:
 
+```js
     $ make
+```
 
 The first launch may take some time as required npm packadges are being
 installed in background.
 
 For development you can run
 
+```js
     $ make server
+```
 
 Upon completion, you'll see the following message:
 
@@ -64,12 +70,15 @@ file.
 ### Defining a block in BEMJSON
 First, let's add a `head` block to the page.
 
+```js
     { block: 'head' }
+```
 
 From this point on, find code snapshots on Gist: https://gist.github.com/4175550
 
 Refresh the page to see the corresponding `<div>`.
 
+```js
     <!DOCTYPE html>
     <html class="i-ua_js_yes i-ua_css_standard">
         <head>...</head>
@@ -77,12 +86,14 @@ Refresh the page to see the corresponding `<div>`.
             <div class="head"></div>
         </body>
     </html>
+```
 
 On the next step, we add a search form, a logo, and describe layout inside the
 header.
 
 Put a `layout` block along with its 2 elements (`left` and `right`) inside `head`.
 
+```js
     content: [
         {
             block: 'head',
@@ -101,9 +112,11 @@ Put a `layout` block along with its 2 elements (`left` and `right`) inside `head
             }
         }
     ]
+```
 
 https://gist.github.com/4175573
 
+```js
     <!DOCTYPE html>
     <html class="i-ua_js_yes i-ua_css_standard">
         <head>...</head>
@@ -116,6 +129,7 @@ https://gist.github.com/4175573
             </div>
         </body>
     </html>
+```
 
 This markup requires CSS rules to be added.
 Or, rewording the same with BEM terms, you have to implement a `layout` block in CSS.
@@ -124,7 +138,9 @@ Or, rewording the same with BEM terms, you have to implement a `layout` block in
 Use `bem create` to get a new block file for the technology
 you are going to work with.
 
+```js
     $ bem create -l desktop.blocks/ -T css -b layout
+```
 
 Running this command creates `desktop.blocks/layout/layout.css`, and inside
 you will find a CSS selector that matches the `layout` block. It's where you step in and
@@ -162,13 +178,17 @@ needs unique styles.
 We will keep CSS rules for `b-logo` in its CSS file, which we need to create on
 the project block level:
 
+```js
     $ bem create -l desktop.blocks/ -T css -b b-logo
+```
 
 Then, save some time and copy CSS from here: https://gist.github.com/4175675
 
 The same can be done for a `b-search` block:
 
+```js
     $ bem create -l desktop.blocks/ -T css -b b-search
+```
 
 https://gist.github.com/4195433
 
@@ -182,18 +202,23 @@ You need an additional container DOM node to center the page. So, we
 define a template implementation for the `b-page` block by creating the same block on
 the project level. We are going to use `BEMHTML` as a templating language.
 
+```js
     $ bem create -l desktop.blocks/ -b b-page -T bemhtml
+```
 
 Add some code to wrap the page contents with an additional container node; put it into the
 newly created `desktop.blocks/b-page/b-page.bemhtml` file.
 
+```js
     block b-page, content: {
         elem: 'body-i',
         content: this.ctx.content
     }
+```
 
 https://gist.github.com/4175742
 
+```js
     <!DOCTYPE html>
     <html class="i-ua_js_yes i-ua_css_standard">
         <head>...</head>
@@ -205,17 +230,22 @@ https://gist.github.com/4175742
             </div>
         </body>
     </html>
+```
 
 Then, implement the `b-page` block in CSS technology to style the resulting markup.
 
+```js
     $ bem create -l desktop.blocks/ -T css -b b-page
+```
 
 Copy CSS code for the newborn
 `desktop.blocks/b-page/b-page.css` file from here: https://gist.github.com/4175763
 
 Define a `border` property for the `head` block so that its placement would be visible.
 
+```js
     $ bem create -l desktop.blocks/ -T css -b head
+```
 
 Again, you can borrow contents for `desktop.blocks/head/head.css` file from
 here: https://gist.github.com/4175776.
@@ -231,6 +261,7 @@ Just to get the idea, let's place a list of goods into the page. It is a
 separate `goods` block declared in a BEMJSON page description and containing all
 the neccessary data.
 
+```js
     {
         block: 'goods',
         goods: [
@@ -248,6 +279,7 @@ the neccessary data.
             },
             ...
     }
+```
 
 https://gist.github.com/4176078
 
@@ -256,12 +288,15 @@ into an appropriate piece of HTML. Also, it needs to be styled with CSS. So, you
 can create this block with all the default technologies by just removing `-T`
 flag.
 
+```js
     $ bem create -l desktop.blocks -b goods
+```
 
 Then, write BEMHTML code turning the input data JSON into block elements and place it
 into the `desktop.blocks/goods/goods.bemhtml` template file. Also, define DOM nodes
 of the block and its elements by using a `tag` mode.
 
+```js
     block goods {
 
         tag: 'ul'
@@ -273,9 +308,11 @@ of the block and its elements by using a `tag` mode.
         elem title, tag: 'h3'
 
     }
+```
 
 https://gist.github.com/4176118
 
+```js
     <!DOCTYPE html>
     <html class="i-ua_js_yes i-ua_css_standard">
         <head>...</head>
@@ -294,10 +331,12 @@ https://gist.github.com/4176118
             </div>
         </body>
     </html>
+```
 
 Templates can produce not only nested elements but nested blocks as well. In this
 example, you can wrap price values with a `b-link` block from the `bem-bl` library.
 
+```js
     {
         elem: 'price',
         content: {
@@ -306,22 +345,26 @@ example, you can wrap price values with a `b-link` block from the `bem-bl` libra
             content: item.price
         }
     }
+```
 
 https://gist.github.com/4176996
 
 An extra trick: if you would like to avoid cascade when styling the block,
 mark this link as an element of `goods` block.
 
+```js
     {
         block: 'b-link',
         mix: [{ block: 'goods', elem: 'link' }],
         url: item.url,
         content: item.price
     }
+```
 
 https://gist.github.com/4177113
 
-    ...
+```js
+    // ...
     <ul class="goods">
         <li class="goods__item">
             <h3 class="goods__title">Apple iPhone 4S 32Gb</h3>
@@ -333,6 +376,7 @@ https://gist.github.com/4177113
         <li class="goods__item">...</li>
         <li class="goods__item">...</li>
     </ul>
+```
 
 Then, use a a modifier to mark new items corresponding to new goods, and with a bit of
 skill on your part you can add some layout nodes.<br/>
@@ -348,27 +392,33 @@ width="500" height="368" title="List of goods" alt="List of goods" border="0"/>
 You also need some extra CSS for our dearest friend, the IE browser, since it is not among the
 list of default block technologies.
 
+```js
     $ bem create block -l desktop.blocks/ -T ie.css goods
+```
 
 Again, contents for the resulting `desktop.blocks/goods/goods.ie.css` file is
 already waiting for your on Gist: https://gist.github.com/4177174
 
 ## Block dependencies
-Besides declaring blocks in input JSON data you need to make sure the 
+Besides declaring blocks in input JSON data you need to make sure the
 corresponding templates, CSS and JavaScript are linked to the page. You can do this by
 using a special `deps.js` block technology which, as you probably guess, is used to describe
 block dependencies.
 
+```js
     $ bem create -l desktop.blocks/ -T deps.js -b goods
+```
 
 You can use moderate dependency type codenamed `shouldDeps` and declare that you
 need `b-link` block.
 
+```js
     ({
         shouldDeps: [
             { block: 'b-link' }
         ]
     })
+```
 
 https://gist.github.com/4177031
 
@@ -381,6 +431,7 @@ It provides just one block named `box` that does all we need.
 You should declare library repository URL in `./bem/make.js` file to get its
 code into your project.
 
+```js
     getLibraries: function() {
 
         return {
@@ -400,12 +451,14 @@ code into your project.
         };
 
     }
+```
 
 https://gist.github.com/4177229
 
 Then, make your pages take blocks from the block level provided by the library.
 Do this by tuning a bundle configuration in `desktop.bundles/.bem/level.js`.
 
+```js
     exports.getConfig = function() {
 
         return BEM.util.extend(this.__base() || {}, {
@@ -419,6 +472,7 @@ Do this by tuning a bundle configuration in `desktop.bundles/.bem/level.js`.
         });
 
     };
+```
 
 https://gist.github.com/4177250
 
@@ -434,14 +488,17 @@ One of the possible ways to mix blocks is to declare this mix in BEMJSON input
 data.<br/>
 Here you can mix `head` and `box` blocks by changing the page.
 
+```js
     {
         block: 'head',
         mix: [ { block: 'box' } ],
         content: ...
     }
+```
 
 https://gist.github.com/4177292
 
+```js
     <!DOCTYPE html>
     <html class="i-ua_js_yes i-ua_css_standard">
         <head>...</head>
@@ -454,16 +511,21 @@ https://gist.github.com/4177292
             </div>
         </body>
     </html>
+```
 
 Don't forget to declare that a `head` block requires a `box` block.
 
+```js
     $ bem create -l desktop.blocks/ -T deps.js -b head
+```
 
+```js
     ({
         shouldDeps: [
             { block: 'box' }
         ]
     })
+```
 
 https://gist.github.com/4235143
 
@@ -474,14 +536,17 @@ You can also mix an element with a block.<br/>
 Let's specify that each `item` element in a `goods` block is at the same time a `box`
 block.
 
+```js
     content.push({
         elem: 'item',
         mods: mods,
         mix: [{ block: 'box' }],
         content: ...
+```
 
 https://gist.github.com/4177350
 
+```js
     <!DOCTYPE html>
     <html class="i-ua_js_yes i-ua_css_standard">
         <head>...</head>
@@ -502,7 +567,7 @@ https://gist.github.com/4177350
             </div>
         </body>
     </html>
-
+```
 
 <img src="http://img-fotki.yandex.ru/get/6511/14441195.26/0_6f0c5_bcef9ce9_L.jpg"
 width="500" height="286" title="Inboxed items" alt="Inboxed items" border="0"/>
@@ -515,12 +580,15 @@ dynamic functionality coded in JavaScript.
 If you'd like to use this in `head`, change the block BEMJSON declaration, and
 set that mixed `box` block uses its JavaScript implementation.
 
+```js
     mix: [{ block: 'box', js: true }]
+```
 
 https://gist.github.com/4202622
 
 It is required to have a `switcher` element in the block.
 
+```js
     content: [
         {
             block: 'layout',
@@ -531,6 +599,7 @@ It is required to have a `switcher` element in the block.
             elem: 'switcher'
         }
     ]
+```
 
 https://gist.github.com/4202651
 
@@ -548,19 +617,24 @@ But thanks to using the [i-bem
 block-framework](https://github.com/bem/bem-bl/tree/master/blocks-common/i-bem)
 you can change (redefine or extend) block JavaScript on your own level.
 
+```js
     bem create -l desktop.blocks -T js -b box
+```
 
 Remove everything but `setMod` section from the resulting `desktop.blocks/box/box.js`
 file.
 
+```js
     onSetMod : {
 
     }
+```
 
 https://gist.github.com/4195865
 
 In this example the block is told to respond to setting and removing a `closed` modifier.
 
+```js
     onSetMod : {
 
         'closed': {
@@ -573,6 +647,7 @@ In this example the block is told to respond to setting and removing a `closed` 
         }
 
     }
+```
 
 https://gist.github.com/4195879
 
@@ -580,7 +655,9 @@ https://gist.github.com/4195879
 In the BEM world, a page is also a block on a special level. So, you can use
 `bem create` for pages as well.
 
+```js
     $ bem create -l desktop.bundles -b contact
+```
 
 As you can see, there is no `-T` flag here. That's because the `desktop.bundles`
 block level implementation defaults to `BEMJSON` technology.<br/>
@@ -599,7 +676,9 @@ For production deployment, all pages have to be built, no matter if they were ch
 You can use `bem make` for that.<br/>
 It's recommended to run a local project version:
 
+```js
     $ ./node_modules/bem/bin/bem make
+```
 
 -------------
 
