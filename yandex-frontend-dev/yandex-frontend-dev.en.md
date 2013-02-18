@@ -403,7 +403,7 @@ Then, you can pack the CSS files for the pages with these blocks using an
 ````js
     @import url(blocks/header.css);
     @import url(blocks/menu.css);
-    @import url(blocks/tabbed-pane.css); 
+    @import url(blocks/tabbed-pane.css);
     @import url(blocks/text.css);
     @import url(blocks/logo.css);
     @importurl(blocks/footer.css);
@@ -991,7 +991,7 @@ store it under the block folder.
             dropdown.js
         tabbed-pane/
             tabbed-pane.css
-            tabbed-pane.js 
+            tabbed-pane.js
 ````
 
 Inside the `menu.js` file there is a piece of logic related to the `Menu`. The
@@ -1035,7 +1035,8 @@ decrease the amount of CSS files. Each CSS `@import` causes an HTTP request maki
 a browser to load many files.
 
 ````js
-    @import url(blocks/header.css);     @import url(blocks/menu.css);
+    @import url(blocks/header.css);
+    @import url(blocks/menu.css);
     ...
 ````
 
@@ -1327,7 +1328,8 @@ preforms structural optimizations, which no one of existing optimizers can do.
     }
 
     .test1, .test3 {
-        background-color: #F00;     }
+        background-color: #F00;
+    }
 ````
 
 These two small pieces of code give a taste how smart CSSO is. Indeed the full
