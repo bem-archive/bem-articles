@@ -30,6 +30,7 @@ parts and so on.
 
 As web developers, you know that behind the page there are our dear HTML and CSS.
 
+````js
     <!DOCTYPE html>
     <html>
         <head>...</head>
@@ -43,6 +44,7 @@ As web developers, you know that behind the page there are our dear HTML and CSS
         color: black;
     }
     .sidebar ul li {
+````
 
 Also, besides the page is really combination of HTML and CSS, it's also a set of
 interface pieces.
@@ -156,11 +158,13 @@ Each block is represented by a piece of HTML markup. To style the block you can
 write the CSS rules, as usual.<br/>
 `Menu` block is an `ul` tag and its content.
 
+````js
     <ul class="menu">
         <li><a href="/new">New titiles</a></li>
         <li><a href="/soon">Coming soon</a></li>
         <li><a href="/best">Bestsellers</a></li>
         ...
+````
 
 <img
 src="http://img-fotki.yandex.ru/get/5634/14441195.26/0_711db_81f5c441_L.jpg"
@@ -169,10 +173,12 @@ width="500" height="47" title="" alt="" border="0"/>
 The same works for the `Search` block, that is represented by `div` tag with
 some content.
 
+````js
     <div class="search">
         <input type="text" name="search" value="..."/>
         <input type="button" name="sbmt" value="Search"/>
     </div>
+````
 
 The last example is the `Tabbed Pane` block, which is also a combination of HTML
 and CSS.
@@ -181,6 +187,7 @@ and CSS.
 src="http://img-fotki.yandex.ru/get/6439/14441195.26/0_711dc_2f5ffa46_M.jpg"
 width="300" style="float: left" height="259" title="" alt="" border="0"/>
 
+````js
     <div class="tabbed-pane">
         <ul>
             <li>Bestsellers</li><li>...</li>
@@ -189,6 +196,7 @@ width="300" style="float: left" height="259" title="" alt="" border="0"/>
            The Casual Vacancy, J.K. Rowling
         </div>
      </div>
+````
 
 <div style="clear:both"></div>
 
@@ -206,6 +214,7 @@ When filling a page with blocks, we developers, shouldn't care where exactly
 each block is placed. You just define a set of blocks with the appropriate order.
 And that's enough for getting a complete functional page.
 
+````js
     <html>
         <head>..</head>
         <body>
@@ -222,6 +231,7 @@ And that's enough for getting a complete functional page.
 
         </body>
     </html>
+````
 
 But, of course, this maybe possible only due to some architectural requirements
 to each block. Let us now see what these requirements are. For this let's have a
@@ -246,19 +256,23 @@ So,
 
 **wrong**
 
+````js
     <ul id="menu">
         ...
 
     #menu {
         ...
+````
 
 **right**
 
+````js
     <ul class="menu">
         ...
 
     .menu {
     ...
+````
 
 This rule is correct for any block.<br/>
 Even if you think *now* that the block is unique within a page, this can be
@@ -386,12 +400,14 @@ Pane` block is the `tabbed-pane.css` file and so on.
 Then, you can pack the CSS files for the pages with these blocks using an
 `import` keyword.
 
+````js
     @import url(blocks/header.css);
     @import url(blocks/menu.css);
     @import url(blocks/tabbed-pane.css); 
     @import url(blocks/text.css);
     @import url(blocks/logo.css);
     @importurl(blocks/footer.css);
+````
 
 That enables you to take only what's necessary for a page.
 
@@ -413,12 +429,14 @@ width="645" height="46" title="" alt="" border="0"/>
 
 The `Menu` block is going to be the first example.
 
+````js
     <ul class="menu">
         <li><a href="/new">New titles</a></li>
         <li><a href="/soon">Coming soon</a></li>
         <li><a href="/best">Bestsellers</a></li>
         ...
     </ul>
+````
 
 It's represented by `ul` tag and has some `li` children for the items. Also, the
 `ul` tag is marked with a CSS class, so that you can apply the rules to it.<br/>
@@ -426,12 +444,14 @@ But the question is "What to do with the items?"
 
 The wide-spreaded solution is to write the CSS selector similar to the following.
 
+````js
     .menu li
     {
         list-style: none;
         display: inline-block;
         padding: 0 0.5em;
     }
+````
 
 As you can see, cascade is used here. It seems to work right at first, because
 all the reasons I listed against cascade are not for this situation. `li` tags
@@ -501,19 +521,23 @@ To apply CSS rules to the elements you will need to mark them with classes.<br/>
 In turn, to avoid cascade, it's necessary to prefix these classes with the block
 name.
 
+````js
     <ul class="menu">
         <li class="menu__item"><a href="/">Index</a></li>
         <li class="menu__item"><a href="/new">New</a></li>
         <li class="menu__item"><a href="/offer">Special offer</a></li>
         <li class="menu__item"><a href="/shipping">Shipping</a></li>
     </ul>
+````
 
+````js
     .menu__item
     {
         list-style: none;
         display: inline-block;
         padding: 0 0.5em;
     }
+````
 
 You can see here that CSS class for a menu item consists of block name, which is
 `menu`, element name, which is `item` and a group of separation symbols.
@@ -521,9 +545,11 @@ You can see here that CSS class for a menu item consists of block name, which is
 We, at Yandex, use 2 underscores for separation. But that's optional. You can
 choose another symbol or a group of symbols.
 
+````js
     .block__element
     .block-element
     .block--element
+````
 
 If you don't like 2 underscores, maybe you'll be pleased with 3 ;-)
 
@@ -548,6 +574,7 @@ CSS code for the elements we use.
 
 Similar to blocks, elements can be stored separately.
 
+````js
     blocks/
 
         search.css
@@ -564,6 +591,7 @@ Similar to blocks, elements can be stored separately.
         book.css
         book__title.css
         book__image.css
+````
 
 That enables you to take element code only if you want. If not, you just won't
 write the import instruction linking it to your page.
@@ -600,6 +628,7 @@ blocks. But that would be copy paste which we we can't abide.
 The way out is to equip a block with an additional CSS class to provide changes.
 Such an addition is called a modifier.
 
+````js
     <div class="tabbed-pane tabbed-pane_theme_blue">
         <ul>
             <li class="tabbed-pane__tab">Tab 1</li>
@@ -609,10 +638,12 @@ Such an addition is called a modifier.
             ...
         </div>
     </div>
+````
 
 Remember, we were wise enough to use classes. So, we can add to a block DOM node
 as many modifiers as we need.
 
+````js
     <div class="tabbed-pane
                 tabbed-pane_theme_blue
                 tabbed-pane_direction_bottom">
@@ -622,6 +653,7 @@ as many modifiers as we need.
     <input class="button
                   button_theme_black
                   button_size_l" ... />
+````
 
 You can use different modifiers to change different properties. For example, the
 `theme` modifier can change block's background color and the `size` modifier
@@ -632,6 +664,7 @@ fixes all the dimensions of the block.
 A modifier is a key-value combination, it consists of modifier name, modifier
 value and is prefixed with block name.
 
+````js
     tabbed-pane_theme_blue
     tabbed-pane_theme_white
 
@@ -640,6 +673,7 @@ value and is prefixed with block name.
 
     button_size_s
     button_size_l
+````
 
 Indeed, modifiers are optional. You almost never will need to link to a page all
 the block modifiers since blocks are rarely used in all their modifications
@@ -647,6 +681,7 @@ within one page.<br/>
 So, similar to optional elements, you can detach their CSS code into their own
 files.
 
+````js
     blocks/
         tabbed-pane.css
         tabbed-pane__tab.css
@@ -654,6 +689,7 @@ files.
         tabbed-pane_theme_blue.css
         tabbed-pane_theme_black.css
         tabbed-pane_direction_bottom.css
+````
 
 When building a page CSS file of blocks, you can take only those modifiers which
 it needs.
@@ -670,11 +706,13 @@ look a bit different from their friends.
 To deliver design changes to an active tab, you need to add a modifier to an
 element. Similar to what we was doing for blocks.
 
+````js
     <div class="tabbed-pane">
         <span class="
             tabbed-pane__tab
             tabbed-pane__tab_state_current">...</span>
     </div>
+````
 
 ### Block Modifier DOES Affect Element
 Now I'm going to show you where cascade is posible.
@@ -687,11 +725,13 @@ You can see a modified block here. It has a blue theme. Of course, when having a
 blue theme the block should guarantee that its elements will work correctly. In
 this situation you allow the block affect its elements.
 
+````js
     .tabbed-pane_theme_blue
     .tabbed-pane__tab
     {
        background-color: #9CF;
     }
+````
 
 Here cascade is possible because the tabs' appearance DOES depend on block's
 modifier.
@@ -708,6 +748,7 @@ And just to wrap up, to make your blocks independent, be sure that
 All the previously shown examples used flat variant when CSS files for blocks,
 elements and modifiers are placed into one folder `blocks`.
 
+````js
     blocks/
 
         tabbed-pane.css
@@ -728,12 +769,14 @@ elements and modifiers are placed into one folder `blocks`.
         search.css
         search__checkbox.css
         search__autocomplete.css
+````
 
 That works for not very large projects and not very complicated blocks.
 
 If you expect many blocks with elements and modifiers, it's good to contain all
 the files related to a block in a block folder.
 
+````js
     blocks/
 
         tabbed-pane/
@@ -758,12 +801,14 @@ the files related to a block in a block folder.
             search.css
             search__checkbox.css
             search__autocomplete.css
+````
 
 Less mess, and also it's much easier to copy block files from project to project.
 
 We, at Yandex, use the most detailed structure with internal folders for
 elements and modifiers.
 
+````js
     blocks/
 
         tabbed-pane/
@@ -777,6 +822,7 @@ elements and modifiers.
                 tabbed-pane_theme_blue.css
                 tabbed-pane_theme_black.css
             tabbed-pane.css
+````
 
 It is not obligatory, but just works for our case.
 
@@ -812,6 +858,7 @@ It is possible to link an additional CSS file to a page, especially for IE.
 Using conditional comments you make other browsers ignore this file. So that,
 there we can write fixes for IE only.
 
+````js
     <html>
         <head>
             <!--[if gt IE 7]><!-->
@@ -822,13 +869,16 @@ there we can write fixes for IE only.
             <![endif]-->
         </head>
         ...
+````
 
 Inside the `ie.css` file you import the general CSS file for the page.
 
+````js
     @import url(index.css);
     @import url(blocks/menu/menu.ie.css);
     @import url(blocks/button/button.ie.css);
     @import url(blocks/footer/footer.ie.css);
+````
 
 Then, you can redefine CSS that doesn't work correctly for every piece of
 interface. It's logical to do it separately for each block.
@@ -837,6 +887,7 @@ Blocks that need special IE hacks are equipped with additional `ie.css` files.
 If all the block files are under the block folder, we can just place one more
 file in it.
 
+````js
     blocks/
 
         tabbed-pane/
@@ -847,9 +898,11 @@ file in it.
         menu/
             menu.css
             menu.ie.css
+````
 
 The same works for elements and modifiers.
 
+````js
     blocks/
 
         tabbed-pane/
@@ -859,6 +912,7 @@ The same works for elements and modifiers.
             tabbed-pane__item.ie.css
             tabbed-pane_theme_blue.css
             tabbed-pane_theme_blue.ie.css with
+````
 
 So, a block folder encapsulates all the CSS needed. Using the project block
 stack we can assemble CSS files for pages, both the general one and for IE.
@@ -898,6 +952,7 @@ usually supplied with JavaScript logic by linking a `.js` file to it.
 Again, for small projects all the magic can fit comfortably into a single one
 JavaScript file.
 
+````js
     <!DOCTYPE html>
     <html>
         <head>
@@ -905,10 +960,12 @@ JavaScript file.
             <script type="text/javascript" src="all.js"></script>
         </head>
         ...
+````
 
 But usually we have different functionality for different pages. So that similar
 to CSS we a have separate JS file for every page.
 
+````js
     <!DOCTYPE html>
     <html>
         <head>
@@ -916,6 +973,7 @@ to CSS we a have separate JS file for every page.
             <script type="text/javascript" src="index.js"></script>
         </head>
         ...
+````
 
 Again, block set of a page can be changed and you need to ensure that you link
 corresponding JavaScript.
@@ -923,6 +981,7 @@ corresponding JavaScript.
 Similar to CSS for blocks, you can detach a separate js file for every block and
 store it under the block folder.
 
+````js
     blocks/
         menu/
             menu.css
@@ -933,6 +992,7 @@ store it under the block folder.
         tabbed-pane/
             tabbed-pane.css
             tabbed-pane.js 
+````
 
 Inside the `menu.js` file there is a piece of logic related to the `Menu`. The
 same for the `Tabbed Pane`.
@@ -940,9 +1000,11 @@ same for the `Tabbed Pane`.
 Using these pieces of logic you can build JavaScript file for a page similar to
 what you've done with CSS before.
 
+````js
     borschik:include:blocks/menu/menu.js
     borschik:include:blocks/tabbed-pane/tabbed-pane.js
     ...
+````
 
 Each line in the file refers to a particular block.
 
@@ -951,12 +1013,14 @@ Each line in the file refers to a particular block.
 Don't be confused with an unfamiliar `include` instruction. Of course, we are
 not going to supply a browser with such a strange file but flatten each include.
 
+````js
     /* Menu block begins */
     (function($){
         $('.menu__item').on('click', function(e) {
             $(this).toggleClass('menu__item_state_current');
         });
     })(jQuery)
+````
 
 Here you can see here that including line for the menu turned into the content
 of the file.
@@ -970,41 +1034,51 @@ You can work with imports when developing, but for production it's better to
 decrease the amount of CSS files. Each CSS `@import` causes an HTTP request making
 a browser to load many files.
 
+````js
     @import url(blocks/header.css);     @import url(blocks/menu.css);
     ...
+````
 
 Using `borschik` to prepare a project for production deployment you can turn all
 the imports into relevant CSS content.
 
+````js
     .header {
         ...
     }
     .menu {
         ...
     }
+````
 
 This is very important that `borschik` works correctly with relative paths in CSS.
 So, it's not just stupid inlining.
 
 **blocks/menu/menu.css**
 
+````js
     .menu {
 
         background: url(menu__bg.png);
 
     }
+````
 
 **pages/index.css**
 
+````js
     @import url(blocks/menu/menu.css);
+````
 
 **pages/_index.css**
 
+````js
     .menu {
 
         background: url(../blocks/menu/menu__bg.png);
 
     }
+````
 
 ## Building Page Files
 
@@ -1025,6 +1099,7 @@ width="800" height="558" title="" alt="" border="0"/>
 We got this information with a visual language the picture provides. But the
 same can be described in text. Any nesting format works for it.
 
+````js
     <b:page>
         <b:head>
             <b:logo/>
@@ -1036,9 +1111,11 @@ same can be described in text. Any nesting format works for it.
                 <e:item>Home</e:item>
                 <e:item>Contacts</e:item>
                 ...
+````
 
 In Yandex it used to use XML, but now it's JSON.
 
+````js
     {
         block: 'page',
         content: [
@@ -1049,6 +1126,7 @@ In Yandex it used to use XML, but now it's JSON.
                     {
                         block: 'search',
                         ...
+````
 
 This page declaration is called `BEM tree` by analogy to DOM tree.
 
@@ -1069,6 +1147,7 @@ It already supports many fashionable technologies you might want to use, such as
 SASS, LESS, CoffeeScript. You are free to write code for your blocks with them
 and then build it into pages.
 
+````js
     blocks/
 
         menu/
@@ -1085,6 +1164,7 @@ and then build it into pages.
         index.html
         index.sass -> index.css
         index.coffee -> index.js
+````
 
 Also it allows extensions. So, if your project needs a specific technology, you
 can a bit tune building instructions to teach the tools how to work with it.
@@ -1101,18 +1181,21 @@ divide any technology into blocks and then build pages.
 For example, equip blocks with their Markdown description and build
 documentation site for your project block stack automatically.
 
+````js
     blocks/
 
         menu/
             tabbed-pane.css
             tabbed-pane.js
             tabbed-pane.md
+````
 
 This is what we've done at Yandex for our internal block library.
 
 Also, you can produce HTML output for blocks with templates. And templates are a
 block technology as well.
 
+````js
     blocks/
 
         menu/
@@ -1120,11 +1203,13 @@ block technology as well.
             tabbed-pane.js
             tabbed-pane.md
             tabbed-pane.xsl
+````
 
 For our internal library we also used to use XSL asa templating solution. But
 not long ago we struggled with XSL for speed and came up with our own
 JavaScript-based template engine, called `BEMHTML`.
 
+````js
     blocks/
 
         menu/
@@ -1132,6 +1217,7 @@ JavaScript-based template engine, called `BEMHTML`.
             tabbed-pane.js
             tabbed-pane.md
             tabbed-pane.bemhtml
+````
 
 When that happend, we were just to add one more technology into already existing
 blocks. That was very easy.
@@ -1218,6 +1304,7 @@ preforms structural optimizations, which no one of existing optimizers can do.
 
 **before**
 
+````js
     .test1 {
         border: none;
         background-color: red;
@@ -1230,15 +1317,18 @@ preforms structural optimizations, which no one of existing optimizers can do.
     .test3 {
         background-color: #FF000;
     }
+````
 
 **after**
 
+````js
     .test1, .test2 {
         border: none
     }
 
     .test1, .test3 {
         background-color: #F00;     }
+````
 
 These two small pieces of code give a taste how smart CSSO is. Indeed the full
 list of the transformations it makes on CSS cannot be listed because of it's
