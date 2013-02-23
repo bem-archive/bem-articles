@@ -3,7 +3,7 @@
 This article shows you how to develop an [online shop
 web page](http://toivonen.github.com/online-shop-dummy/desktop.bundles/index/index.html)
 using BEM principles in CSS, JavaScript and BEMHTML templates. While developing,
-we will use `bem tools` and its subcommand `bem server`.
+we will use the command-line application: `bem tools` and its subcommand: `bem server`.
 
 <img
 src="http://img-fotki.yandex.ru/get/6505/14441195.26/0_6f0b2_557ef428_L.jpg"
