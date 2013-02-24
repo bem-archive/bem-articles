@@ -5,10 +5,7 @@ web page](http://toivonen.github.com/online-shop-dummy/desktop.bundles/index/ind
 using BEM principles in CSS, JavaScript and BEMHTML templates. While developing,
 we will use the command-line application: `bem tools` and its subcommand: `bem server`.
 
-<img
-src="http://img-fotki.yandex.ru/get/6505/14441195.26/0_6f0b2_557ef428_L.jpg"
-width="500" height="351" title="Online shop web page" alt="Online shop web page"
-border="0"/>
+![Online shop web page](http://img-fotki.yandex.ru/get/6505/14441195.26/0_6f0b2_557ef428_L.jpg "Online shop web page")
 
 ## Tools
 You need a command-line toolkit [bem tools](https://github.com/bem/bem-tools) to
@@ -164,10 +161,7 @@ You can use our [cute BEM
 image](http://toivonen.github.com/online-shop-dummy/desktop.blocks/b-logo/b-logo.png)
 for the logo, or pick any other image you like :-)
 
-<img
-src="http://img-fotki.yandex.ru/get/4119/14441195.26/0_6f0b9_2d1d77a3_XL.jpg"
-width="800" height="187" title="Using the block library"
-alt="Using the block library" border="0"/>
+![Using the block library](http://img-fotki.yandex.ru/get/4119/14441195.26/0_6f0b9_2d1d77a3_XL.jpg "Using the block library")
 
 ### Redefining library blocks
 #### Redefining in CSS
@@ -192,10 +186,7 @@ The same can be done for a `b-search` block:
 
 https://gist.github.com/4195433
 
-<img
-src="http://img-fotki.yandex.ru/get/5708/14441195.26/0_6f0ba_bb628e4c_XL.jpg"
-width="800" height="141" title="Styled header" alt="Styled header"
-border="0"/>
+![Styled header](http://img-fotki.yandex.ru/get/5708/14441195.26/0_6f0ba_bb628e4c_XL.jpg "Styled header")
 
 #### Redefining BEMHTML
 You need an additional container DOM node to center the page. So, we
@@ -250,8 +241,7 @@ Define a `border` property for the `head` block so that its placement would be v
 Again, you can borrow contents for `desktop.blocks/head/head.css` file from
 here: https://gist.github.com/4175776.
 
-<img src="http://img-fotki.yandex.ru/get/6505/14441195.26/0_6f0bc_d000a7a2_L.jpg"
-width="500" height="129" title="Bordered header" alt="Bordered header" border="0"/>
+![Bordered header](http://img-fotki.yandex.ru/get/6505/14441195.26/0_6f0bc_d000a7a2_L.jpg "Bordered header")
 
 ## BEMHTML templates
 You can use BEMHTML templates not only to declare the HTML tags to output but also
@@ -386,8 +376,7 @@ Use this code snapshot for block CSS: https://gist.github.com/4177163<br/>
 Notice that you don't need to create a CSS file for the block here because it had already
 been generated when creating the block; CSS is one of the block's default technologies.
 
-<img src="http://img-fotki.yandex.ru/get/6508/14441195.26/0_6f0c7_e5284b82_L.jpg"
-width="500" height="368" title="List of goods" alt="List of goods" border="0"/>
+![List of goods](http://img-fotki.yandex.ru/get/6508/14441195.26/0_6f0c7_e5284b82_L.jpg "List of goods")
 
 You also need some extra CSS for our dearest friend, the IE browser, since it is not among the
 list of default block technologies.
@@ -529,8 +518,7 @@ Don't forget to declare that a `head` block requires a `box` block.
 
 https://gist.github.com/4235143
 
-<img src="http://img-fotki.yandex.ru/get/5803/14441195.26/0_6f0c4_4e3f9249_XL.jpg" width="800"
-height="238" title="Head + Box = ❤" alt="Head + Box = ❤" border="0"/>
+![Head + Box = &hearts;](http://img-fotki.yandex.ru/get/5803/14441195.26/0_6f0c4_4e3f9249_XL.jpg "Head + Box = &hearts;")
 
 You can also mix an element with a block.<br/>
 Let's specify that each `item` element in a `goods` block is at the same time a `box`
@@ -569,8 +557,7 @@ https://gist.github.com/4177350
     </html>
 ```
 
-<img src="http://img-fotki.yandex.ru/get/6511/14441195.26/0_6f0c5_bcef9ce9_L.jpg"
-width="500" height="286" title="Inboxed items" alt="Inboxed items" border="0"/>
+![Inboxed items](http://img-fotki.yandex.ru/get/6511/14441195.26/0_6f0c5_bcef9ce9_L.jpg "Inboxed Items")
 
 ## Declarative JavaScript
 ###JavaScript for a block
@@ -606,8 +593,7 @@ https://gist.github.com/4202651
 With that you have a block with a clickable arrow-shaped element which rolls the
 block up.
 
-<img src="http://img-fotki.yandex.ru/get/4603/14441195.26/0_6f0c8_b65eea6_L.jpg"
-width="318" height="264" title="Arrow" alt="Arrow" border="0"/>
+![Arrow](http://img-fotki.yandex.ru/get/4603/14441195.26/0_6f0c8_b65eea6_L.jpg "Arrow")
 
 ### Redefining JavaScript
 What if you are not satisfied with the dynamic functionality provided with the `box`
