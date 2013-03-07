@@ -417,7 +417,7 @@ a shadow. We can borrow a block from [a friend's of mine block
 library](https://github.com/john-johnson/j).<br/>
 It provides just one block named `box` that does all we need.
 
-You should declare library repository URL in `./bem/make.js` file to get its
+You should declare library repository URL in `.bem/make.js` file to get its
 code into your project.
 
 ```js
