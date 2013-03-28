@@ -666,9 +666,10 @@ It's recommended to run a local project version:
     $ ./node_modules/bem/bin/bem make
 ```
 
--------------
+****
+Author: [Varya Stepanova](http://toivonen.github.com/)
 
-<sup>Credits</sup>
+**Credits**<br/>
 Many thanks to [tyv](https://github.com/tyv) and
 [gela-d](https://github.com/gela-d) for cute HTML/CSS markup,
 and to [ingdir](https://github.com/ingdir) for his help with the English version.

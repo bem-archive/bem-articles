@@ -1350,3 +1350,7 @@ So, BEM is
 Please address your questions to the comminuty asking in [BEM Facebook
 group](http://www.facebook.com/groups/209713935765634/) or in Twitter
 [@bem_tw](https://twitter.com/bem_tw).
+
+****
+Author: [Varya Stepanova](http://toivonen.github.com/)<br/>
+This information is also available as a talk "[BEM. What you can borrow from Yandex frontend dev](https://vimeo.com/53219242)" given at [WebConf Riga](http://webconf.lv/) at 10th November 2012.
