@@ -45,7 +45,7 @@ i-bem](http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html)
 функционирующую часть интерфейса. Здесь для этого достаточно добавить блоку
 CSS-класс `i-bem` и указать в атрибуте onclick параметры блока.
 
-```html
+```js
 <div
     class="myblock i-bem"
     onclick="return {
