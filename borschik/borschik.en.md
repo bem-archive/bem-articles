@@ -92,7 +92,7 @@ This expression must be in a block comment `/*borschik:include:file.js*/` or str
 Comment and string have several semantic.
 
 
-If `include` is in a comment it will be replaced by the file's content without any transformation. 
+If `include` is in a comment it will be replaced by the file's content without any transformation.
 `page.js`
 ```js
 var prj = {};
@@ -184,7 +184,7 @@ Expires:Thu, 31 Dec 2037 23:55:55 GMT
 
 
 For example, link to CSS
-```html
+```xml
 <link rel="stylesheet" href="//yandex.st/my-prj/1.0.0/css/page.css"/>
 ```
 Assume we have the background image url:
@@ -201,7 +201,7 @@ So the url to the image is:
 ```
 
 The problem: when you change CSS you have to change the url to invalidate browser cache
-```html
+```xml
 <link rel="stylesheet" href="//yandex.st/my-prj/1.0.1/css/page.css"/>
 ```
 And the url of the image is also changed
@@ -404,7 +404,7 @@ new Image().src = borschik.link('@ico-' + iconName + '-png')
 Borschik also can freeze static resources in HTML.
 
 For example,
-```html
+```xml
 <html>
     <head>
         <link rel="stylesheet" href="1.css"/>
@@ -423,7 +423,7 @@ $ borschik --tech=html --input=index.html
 ```
 
 Result
-```html
+```xml
 <html>
     <head>
         <link rel="stylesheet" href="//yandex.st/prj/_/n8mJAmybm5i9sdsO92s6y0.css"/>
@@ -471,7 +471,7 @@ Benefits:
 * reduce static server workload
 * reduce number of resources need to be downloaded by browser
 * speed up page loading
- 
+
 
 Alexey Androsov
 Lead Yandex.Mail frontend developer
