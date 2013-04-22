@@ -50,7 +50,7 @@ Borschik оперирует двумя понятиями — `include` и `link
 @import url("b-footer/b-footer.css");
 ```
 С помощью команды
-```sh
+```
 $ borschik --input=page.css --minimize=no
 ```
 
@@ -100,7 +100,7 @@ var prj = {};
 ```
 
 Собираем:
-```sh
+```
 $ borschik --input=page.js --minimize=no
 ```
 
@@ -286,7 +286,7 @@ Borschik предлагает простой, но комплексный вар
 ```
 
 Мы его замораживаем
-```sh
+```
 $ borschik --input=css/main.css --freeze=yes
 ```
 
@@ -372,7 +372,7 @@ var icoName = 'yandex';
 new Image().src = borschik.link('@ico-' + iconName + '-png')
 ```
 
-```sh
+```
 # замораживаем JSON
 $ borschik --tech=json-links --input=images.json > _images.json
 # собираем JS
@@ -433,7 +433,7 @@ Borschik умеет замораживать ссылки на статичес�
 ```
 
 Замораживаем
-```sh
+```
 $ borschik --tech=html --input=index.html
 ```
 
@@ -458,14 +458,14 @@ $ borschik --tech=html --input=index.html
 В такой ситуации будет полезно заморозить все файлы.
 Для этого воспользуйтесь подкомандой `borschik freeze`,
 которая согласно конфигу `.borschik` заморозит все файлы в указанной папке
-```sh
+```
 $ borschik freeze \
   --input=path/to/dir \ # папка, в которой надо заморозить все файлы
   --output=freeze-info.json # JSON с mapping'ом оригинальный файл -> замороженный файл
 ```
 
 Пример
-```sh
+```
 $ borschik freeze --input=js > freeze-info.json
 ```
 

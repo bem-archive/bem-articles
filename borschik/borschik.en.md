@@ -49,7 +49,7 @@ And we want to merge them in a single file `page.css` which is located in the pr
 ```
 
 We run borschik
-```sh
+```
 $ borschik --input=page.css --minimize=no
 ```
 
@@ -100,7 +100,7 @@ var prj = {};
 ```
 
 Run Borschik
-```sh
+```
 $ borschik --input=page.js --minimize=no
 ```
 
@@ -272,7 +272,7 @@ For example, we have CSS `css/main.css`
 ```
 
 Freeze it
-```sh
+```
 $ borschik --input=css/main.css --freeze=yes
 ```
 
@@ -357,7 +357,7 @@ var icoName = 'yandex';
 new Image().src = borschik.link('@ico-' + iconName + '-png')
 ```
 
-```sh
+```
 # to freeze the content in our JSON object
 $ borschik --tech=json-links --input=images.json > _images.json
 # and then build our JS
@@ -418,7 +418,7 @@ For example,
 ```
 
 Run Borschik
-```sh
+```
 $ borschik --tech=html --input=index.html
 ```
 
@@ -442,14 +442,14 @@ But we may have cases when we have no links, for example dynamic JS modules load
 In this case it will be useful to freeze all files in directory.
 Borschik has a subcommand `borschik freeze` which freezes all files in the specified directory
 according to the `.borschik` configuration
-```sh
+```
 $ borschik freeze \
   --input=path/to/dir \ # directory to freeze
   --output=freeze-info.json # JSON wit path-mapping original file -> frozen file
 ```
 
 Example
-```sh
+```
 $ borschik freeze --input=js > freeze-info.json
 ```
 
