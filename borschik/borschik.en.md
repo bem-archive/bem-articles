@@ -5,6 +5,7 @@ Borschik is a simple but powerful builder for text-based file formats.
 Its main purpose is the assembly of static files for web projects (CSS, JS, etc.).
 
 Borschik can perform the following operations with files:
+
 * merge
 * modify
 * minify
@@ -13,6 +14,7 @@ Borschik is based on a plugin system. Plugins are called "technologies".
 There are technologies for CSS and JS included, and you can easily extend them or write you own.
 
 Borschik is based on two concepts — `include` and `link`.
+
 * `include`: you have a link to file, which is replaced with the file content.
 * `link`: you have a link to file, the link is transformed.
 
@@ -49,7 +51,7 @@ And we want to merge them in a single file `page.css` which is located in the pr
 ```
 
 We run borschik
-```
+```sh
 $ borschik --input=page.css --minimize=no
 ```
 
@@ -100,7 +102,7 @@ var prj = {};
 ```
 
 Run Borschik
-```
+```sh
 $ borschik --input=page.js --minimize=no
 ```
 
@@ -272,7 +274,7 @@ For example, we have CSS `css/main.css`
 ```
 
 Freeze it
-```
+```sh
 $ borschik --input=css/main.css --freeze=yes
 ```
 
@@ -357,7 +359,7 @@ var icoName = 'yandex';
 new Image().src = borschik.link('@ico-' + iconName + '-png')
 ```
 
-```
+```sh
 # to freeze the content in our JSON object
 $ borschik --tech=json-links --input=images.json > _images.json
 # and then build our JS
@@ -418,7 +420,7 @@ For example,
 ```
 
 Run Borschik
-```
+```sh
 $ borschik --tech=html --input=index.html
 ```
 
@@ -442,14 +444,14 @@ But we may have cases when we have no links, for example dynamic JS modules load
 In this case it will be useful to freeze all files in directory.
 Borschik has a subcommand `borschik freeze` which freezes all files in the specified directory
 according to the `.borschik` configuration
-```
+```sh
 $ borschik freeze \
   --input=path/to/dir \ # directory to freeze
   --output=freeze-info.json # JSON wit path-mapping original file -> frozen file
 ```
 
 Example
-```
+```sh
 $ borschik freeze --input=js > freeze-info.json
 ```
 
@@ -473,7 +475,8 @@ Benefits:
 * speed up page loading
 
 
-Alexey Androsov
-Lead Yandex.Mail frontend developer
-twitter.com/doochik
-github.com/doochik
+Alexey Androsov,
+Lead Yandex.Mail Frontend Developer
+
+* twitter.com/doochik
+* github.com/doochik
