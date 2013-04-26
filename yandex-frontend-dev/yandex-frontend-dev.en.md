@@ -1351,6 +1351,25 @@ Please address your questions to the comminuty asking in [BEM Facebook
 group](http://www.facebook.com/groups/209713935765634/) or in Twitter
 [@bem_tw](https://twitter.com/bem_tw).
 
-****
-Author: [Varya Stepanova](http://toivonen.github.com/)<br/>
+<!--(Begin) Article author block-->
+<div class="article-author">
+    <div class="article-author__photo">
+        <img class="article-author__pictures" src="http://img-fotki.yandex.ru/get/5625/51437929.0/0_bf4ad_363d4605_S.png" alt="Photo Varvara Stepanova">
+    </div>
+    <div class="article-author__info">
+        <div class="article-author__row">
+             <span class="article-author__name">Varvara Stepanova,
+        </div>
+        <div class="article-author__row">
+            Front-end engineer working for Yandex in Moscow since 2008& Lead Developer of the UI Framework Team which provides HTML, CSS and Javascript components used to build over 100 different Yandex services. Participates in the BEM project which is open-sourcing technologies behind Yandex UI framework. When she is not coding, she is interested in travel and new cities. Dreams of visiting every country in the world.        </div>
+        <div class="article-author__row">
+             <a class="article-author__social-icon b-link" target="_blank" href="http://twitter.com/toivonen">twitter.com/toivonen</a>
+        </div>
+        <div class="article-author__row">
+             <a class="article-author__social-icon b-link" target="_blank" href="http://github.com/toivonen">github.com/toivonen</a>
+        </div>
+    </div>
+</div>
+<!--(End) Article author block-->
+
 This information is also available as a talk "[BEM. What you can borrow from Yandex frontend dev](https://vimeo.com/53219242)" given at [WebConf Riga](http://webconf.lv/) at 10th November 2012.
