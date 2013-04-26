@@ -474,9 +474,24 @@ Benefits:
 * reduce number of resources need to be downloaded by browser
 * speed up page loading
 
-
-Alexey Androsov,
-Lead Yandex.Mail Frontend Developer
-
-* twitter.com/doochik
-* github.com/doochik
+<!--(Begin) Article author block-->
+<div class="article-author">
+    <div class="article-author__photo">
+        <img class="article-author__pictures" src="http://img-fotki.yandex.ru/get/5646/51437929.0/0_bf0f0_64369365_S.png" alt="Photo Alexey Androsov">
+    </div>
+    <div class="article-author__info">
+        <div class="article-author__row">
+             <span class="article-author__name">Alexey Androsov,
+        </div>
+        <div class="article-author__row">
+            Lead Yandex.Mail Frontend Developer
+        </div>
+        <div class="article-author__row">
+             <a class="article-author__social-icon b-link" target="_blank" href="http://twitter.com/doochik">twitter.com/doochik</a>
+        </div>
+        <div class="article-author__row">
+             <a class="article-author__social-icon b-link" target="_blank" href="http://github.com/doochik">github.com/doochik</a>
+        </div>
+    </div>
+</div>
+<!--(End) Article author block-->
