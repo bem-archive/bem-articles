@@ -489,8 +489,24 @@ $ borschik freeze --input=js > freeze-info.json
 * ускорение загрузки страницы
 
 
-Алексей Андросов,
-Ведущий разработчик фронтенда Яндекс.Почты
-
-* twitter.com/doochik
-* github.com/doochik
+<!--(Begin) Article author block-->
+<div class="article-author">
+    <div class="article-author__photo">
+        <img class="article-author__pictures" src="http://img-fotki.yandex.ru/get/5646/51437929.0/0_bf0f0_64369365_S.png" alt="Фотография Алексея Андросова">
+    </div>
+    <div class="article-author__info">
+        <div class="article-author__row">
+             <span class="article-author__name">Алексей Андросов,
+        </div>
+        <div class="article-author__row">
+            Ведущий разработчик фронтенда Яндекс.Почты
+        </div>
+        <div class="article-author__row">
+             <a class="article-author__social-icon b-link" target="_blank" href="http://twitter.com/doochik">twitter.com/doochik</a>
+        </div>
+        <div class="article-author__row">
+             <a class="article-author__social-icon b-link" target="_blank" href="http://github.com/doochik">github.com/doochik</a>
+        </div>
+    </div>
+</div>
+<!--(End) Article author block-->
