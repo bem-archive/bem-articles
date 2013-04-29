@@ -70,7 +70,7 @@
              <span class="article-author__name">Владимир Варанкин,
         </div>
         <div class="article-author__row">
-            Ведущий разработчик интерфейсов Яндекса
+            Ведущий разработчик интерфейсов в Яндексе
         </div>
         <div class="article-author__row">
              <a class="article-author__social-icon b-link" target="_blank" href="http://twitter.com/tvii">twitter.com/tvii</a>
