@@ -21,3 +21,6 @@ This is BEMHTML reference manual.
 
 ## [BEMHTML: template engine for BEM](/articles/bemhtml-rationale/)
 BEMHTML rationale.
+
+## [Syntax deps.js](/articles/deps-js-syntax/)
+A brief guide to the syntax of deps.js
