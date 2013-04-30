@@ -1363,7 +1363,7 @@ group](http://www.facebook.com/groups/209713935765634/) or in Twitter
         <div class="article-author__row">
             Front-end engineer working for Yandex in Moscow since 2008& Lead Developer of the UI Framework Team which provides HTML, CSS and Javascript components used to build over 100 different Yandex services. Participates in the BEM project which is open-sourcing technologies behind Yandex UI framework. When she is not coding, she is interested in travel and new cities. Dreams of visiting every country in the world.        </div>
         <div class="article-author__row">
-             <a class="article-author__social-icon b-link" target="_blank" href="http://twitter.com/toivonen">twitter.com/toivonen</a>
+             <a class="article-author__social-icon b-link" target="_blank" href="http://twitter.com/toivonens">twitter.com/toivonens</a>
         </div>
         <div class="article-author__row">
              <a class="article-author__social-icon b-link" target="_blank" href="http://github.com/toivonen">github.com/toivonen</a>

@@ -304,7 +304,7 @@ i-bem](http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html).
             Работает в Яндексе с 2008 года ведущим разработчиком интерфейсов. Руководит группой разработки frontend фреймворка Яндекса, реализованного по методологии БЭМ. Распространяет информацию о БЭМ как в России, так и за рубежом. В свободное от написания кода время любит путешествовать и мечтает побывать во всех странах мира.
         </div>
         <div class="article-author__row">
-             <a class="article-author__social-icon b-link" target="_blank" href="http://twitter.com/toivonen">twitter.com/toivonen</a>
+             <a class="article-author__social-icon b-link" target="_blank" href="http://twitter.com/toivonens">twitter.com/toivonens</a>
         </div>
         <div class="article-author__row">
              <a class="article-author__social-icon b-link" target="_blank" href="http://github.com/toivonen">github.com/toivonen</a>
