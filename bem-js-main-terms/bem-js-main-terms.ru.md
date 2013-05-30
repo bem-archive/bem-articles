@@ -313,4 +313,4 @@ i-bem](http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html).
 </div>
 <!--(End) Article author block-->
 
-Статья подготовлена по материалам выступления [Владимира Варанкина](https://github.com/narqo) «[БЭМ и JavaScript: Зачем мы написали JS-фреймворк?](http://events.yandex.ru/events/yasubbotnik/msk-sep-2012/talks/323/)» на Яндекс.Субботнике в Москве 8 сентября 2012.
+Статья подготовлена по материалам выступления [Владимира Варанкина](https://github.com/narqo) «[БЭМ и JavaScript: Зачем мы написали JS-фреймворк?](http://events.yandex.ru/events/yasubbotnik/msk-sep-2012/talks/323/)» на Я.Субботнике в Москве 8 сентября 2012.
