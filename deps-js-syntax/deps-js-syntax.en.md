@@ -1,6 +1,16 @@
-# Syntax deps.js
+# The Syntax for `deps.js`
 
-This article is available only in Russian.
+## The complete implimentation of the deps object:
 
-If you would like, you contribution in translating will be very much
-appreciated. Do not hesitate to [contact us](mailto:tadatuta@yandex-team.ru).
+```js
+    {
+        block : 'bBlock',
+        elem  : 'elem',
+        mod   : 'modName',
+        val   : 'modValue',
+        tech  : 'techName',  // технология, для которой собираются зависимости (например, js)
+        mustDeps   : [],     // подключатся до блока
+        shouldDeps : [],     // порядок подключения не важен (важно лишь подключить)
+        noDeps : [],         // можно отменить какую-то зависимость (например, i-bem__dom_init_auto)
+    }
+```
