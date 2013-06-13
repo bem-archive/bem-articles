@@ -1,0 +1,99 @@
+# smartcd
+
+_Или как использовать локально установленные инструменты из коммандной строки._
+
+Напомню суть проблемы. Мы рекомендуем ставить зависимости, в том числе утилиту
+[bem](https://github.com/bem/bem-tools), локально в проект. Описываем зависимости
+в `package.json` в корне проекта, устанавливаем их командой `npm install`.
+
+Хочется, чтобы локально установленные инструменты можно было использовать в директории
+с проектом (на любом уровне!) просто вызывая их по имени: `bem make`, `borschik path/to/file.css` и т.д.
+
+Некоторые из нас использует хак с добавлением в переменную окружения `PATH` значения `./node_modules/.bin`.
+Но этот способ работает только тогда, когда мы запускаем команды из корня проекта, а это не всегда удобно.
+
+Есть способ лучше!
+
+Инструмент [smartcd](https://github.com/cxreg/smartcd) позволяет сконфигурировать любую директорию так,
+чтобы при входе в неё (или в одну из её поддиректорий) выполнялись определённые команды или устанавливались
+переменные окружения. Этим мы и воспользуемся!
+
+Короткий способ всё настроить выглядит так:
+
+- устанавливаем smartcd (если не хотите тонко настраивать smartcd, отвечайте на первый вопрос «Configure now? [Y/n]» — N):
+
+    ```
+    curl -L http://smartcd.org/install | bash
+    ```
+
+- создаём шаблон npm-module для smartcd:
+
+    ```
+    smartcd template create
+    ```
+
+- в открывшийся редактор вставляем строку:
+
+    ```
+    smartcd helper run path prepend __PATH__/node_modules/.bin
+    ```
+
+    после такого комментария:
+    `# Enter any bash_enter commands below here: (leave this line!)`
+
+- настраиваем проект:
+
+    ```
+    cd path/to/project
+    echo 'smartcd template run npm-module' | smartcd edit enter
+    ```
+
+Наслаждаемся!
+
+```
+~/projects$ which bem
+/usr/local/bin/bem
+
+~/projects$ cd bem-www
+smartcd: running /Users/arikon/.smartcd/scripts/Users/arikon/projects/bem-www/bash_enter
+
+~/projects/bem-www$ which bem
+/Users/arikon/projects/bem-www/node_modules/.bin/bem
+
+~/projects/bem-www$ cd blocks-desktop/
+
+~/projects/bem-www/blocks-desktop$ which bem
+/Users/arikon/projects/bem-www/node_modules/.bin/bem
+
+~/projects/bem-www/blocks-desktop$ cd ../..
+
+~/projects$ which bem
+/Users/arikon/n/bin/bem
+```
+
+Если вы используете `zsh` с включенной опцией `autocd`, раскомментируйте строку `smartcd setup prompt-hook` в `~/.smartcd_config`.
+
+<!--(Begin) Article author block-->
+<div class="article-author">
+    <div class="article-author__photo">
+        <img class="article-author__pictures" src="http://www.gravatar.com/avatar/6fa6da3a6927ded01bac659b5f1b4281.png?s=130" alt="Фотография Алексея Андросова">
+    </div>
+    <div class="article-author__info">
+        <div class="article-author__row">
+             <span class="article-author__name">Сергей Белов,
+        </div>
+        <div class="article-author__row">
+            Реководитель группы разработки инструментов
+        </div>
+        <div class="article-author__row">
+             <a class="article-author__social-icon b-link" target="_blank" href="http://twitter.com/arik0n">twitter.com/arik0n</a>
+        </div>
+        <div class="article-author__row">
+             <a class="article-author__social-icon b-link" target="_blank" href="http://github.com/arikon">github.com/arikon</a>
+        </div>
+    </div>
+</div>
+<!--(End) Article author block-->
+
+Статья подготовлена на основе оригинальной статьи «[Использование локально установленных инструментов
+из командной строки](http://clubs.ya.ru/bem/replies.xml?item_no=2231)» в Я.ру.
