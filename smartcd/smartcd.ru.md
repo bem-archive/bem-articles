@@ -83,7 +83,7 @@ smartcd: running /Users/arikon/.smartcd/scripts/Users/arikon/projects/bem-www/ba
              <span class="article-author__name">Сергей Белов,
         </div>
         <div class="article-author__row">
-            Реководитель группы разработки инструментов
+            Руководитель группы разработки инструментов
         </div>
         <div class="article-author__row">
              <a class="article-author__social-icon b-link" target="_blank" href="http://twitter.com/arik0n">twitter.com/arik0n</a>
