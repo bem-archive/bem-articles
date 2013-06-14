@@ -48,6 +48,12 @@ _Или как использовать локально установленн�
     echo 'smartcd template run npm-module' | smartcd edit enter
     ```
 
+Удобно настроить такой alias в shell и использовать его:
+
+```
+alias npm-smartcd="echo 'smartcd template run npm-module' | smartcd edit enter"
+```
+
 Наслаждаемся!
 
 ```
