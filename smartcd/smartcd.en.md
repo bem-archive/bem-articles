@@ -1,8 +1,6 @@
-# smartcd
+# smartcd, or how to use local installed tools from the commandline
 
-_or how to use local installed tools from the commandline_
-
-Let us recall heart of a problem. We recommend to install all dependencies  including [bem](https://github.com/bem/bem-tools) locally in the project. We describe them in `package.json` at the project root and install them by command `npm install`.
+Let us recall heart of a problem. We recommend to install all dependencies including [bem-tools](http://bem.info/tools/bem/) locally in the project. We describe them in `package.json` at the project root and install them by command `npm install`.
 
 We would like to use locally installed tools in the project directory (at any level) just by calling their names: `bem make`, `borschik path/to/file.css`, etc.
 
