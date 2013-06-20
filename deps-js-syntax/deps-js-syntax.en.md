@@ -42,7 +42,7 @@ A file named: `b1.deps.js` can be written according to either of these patterns:
 
 This is comparable to `mod` and `val`.
 
-### 3. `elems` — This is a shortcut, which allows you to connect to several elements for blocks a **from the same block**
+### 3. `elems` — This is a shortcut, which allows you to connect to several elements to the same block
 
 ```js
     { block : 'b1', elems : ['e1', 'e2'] }
