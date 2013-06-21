@@ -12,27 +12,27 @@ The tool [smartcd](https://github.com/cxreg/smartcd) allows to configure any dir
 
 The shortcut to set up everything looks as follows:
 
--install `smartcd` (if you don't want to configure the smartcd, just answer the first question `Configure now? [Y/n]` — `N`)
-```
-curl -L http://smartcd.org/install | bash
-```
+  - install `smartcd` (if you don't want to configure the smartcd, just answer the first question `Configure now? [Y/n]` — `N`)
+    ```
+    curl -L http://smartcd.org/install | bash
+    ```
 
--make template npm-module for smartcd
-```
-smartcd template create npm-module
-```
+  - make template npm-module for smartcd
+    ```
+    smartcd template create npm-module
+    ```
 
--in the opened editor insert the line
-```
-smartcd helper run path prepend __PATH__/node_modules/.bin
-```
-after the comment: `# Enter any bash_enter commands below here: (leave this line!)`
+  - in the opened editor insert the line
+    ```
+    smartcd helper run path prepend __PATH__/node_modules/.bin
+    ```
+    after the comment: `# Enter any bash_enter commands below here: (leave this line!)`
 
--set up the project:
-```
-cd path/to/project
-echo 'smartcd template run npm-module' | smartcd edit enter
-```
+  - set up the project:
+    ```
+    cd path/to/project
+    echo 'smartcd template run npm-module' | smartcd edit enter
+    ```
 
 It's very usefull to set such alias for the shell and use it:
 
