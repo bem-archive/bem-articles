@@ -17,9 +17,9 @@
 
 ## Notes to consider while constructing your deps.js for your project:
 
-### 1. Root `blocks` and `elements` start from naming a file, therefore it's optional to create the following file with the following data:
+### 1. `blocks` and `elements` have the filename as a root.
 
-For the file named: `b1.deps.js` write according to this pattern:
+A file named: `b1.deps.js` can be written according to either of these patterns:
 
 ```js
     ({
@@ -40,7 +40,7 @@ For the file named: `b1.deps.js` write according to this pattern:
 
 This is comparable to `mod` and `val`.
 
-### 3. `elems` — This is a shortcut, which allows you to connect to several elements for blocks a **from the same block**
+### 3. `elems` — This is a shortcut, which allows you to connect to several elements to the same block
 
 ```js
     { block : 'b1', elems : ['e1', 'e2'] }
