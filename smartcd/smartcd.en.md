@@ -17,7 +17,7 @@ The shortcut to set up everything looks as follows:
     curl -L http://smartcd.org/install | bash
     ```
 
-  - make template npm-module for smartcd
+  - make template `npm-module` for `smartcd`
     ```
     smartcd template create npm-module
     ```
