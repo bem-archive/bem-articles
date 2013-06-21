@@ -11,8 +11,6 @@
         tech  : 'techName',    // file extention for this dependency (e.g. if javaScript `tech : '.js'`)
         mustDeps   : [  ],     // Array of blocks connected to this dependency
         shouldDeps : [  ],     // The order of connected blocks is not important (important that they connect)
-        //chaals: shouldDeps isn't really clear still. Things that are useful to have??
-        
         noDeps : [  ],         // It's possible to exclude some blocks, for example: `[ 'i-bem__dom_init_auto' ]`
     }
 ```
