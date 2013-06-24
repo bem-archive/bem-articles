@@ -75,7 +75,7 @@ If you are using `zsh` with enabled option `autocd`, uncomment the line `smartcd
              <span class="article-author__name">Sergey Belov,
         </div>
         <div class="article-author__row">
-          Team Leader of the Dev.Tools Design Group in Yandex
+          Yandex Dev.Tools Design Group Team Lead 
         </div>
         <div class="article-author__row">
              <a class="article-author__social-icon b-link" target="_blank" href="http://twitter.com/arik0n">twitter.com/arik0n</a>
