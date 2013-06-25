@@ -87,5 +87,5 @@ If you are using `zsh` with the option `autocd` enabled, uncomment the line `sma
 </div>
 <!--(End) Article author block-->
 
-This article is based on: «[Using the local installed tools from the comandline](http://clubs.ya.ru/bem/replies.xml?item_no=2231)» (Russian only) posted at Ya.ru.
+This article is based on: «[Using the locally installed tools from the command line](http://clubs.ya.ru/bem/replies.xml?item_no=2231)» (Russian only) posted at Ya.ru.
 
