@@ -11,7 +11,7 @@ Borschik is a simple but powerful builder for text-based file formats.
 How to write client side JS using i-bem.js from bem-bl library.
 
 ## [BEM app with LeafLet and 2GIS API](/articles/firm-card-story/)
-An example of map service made with BEM
+An example of map service made with BEM.
 
 ## [Hello, BEMHTML!](/articles/bemhtml-intro/)
 This document will help to start writing BEMHTML templates and get the main principles in 7 simple steps.
@@ -24,3 +24,6 @@ BEMHTML rationale.
 
 ## [Syntax deps.js](/articles/deps-js-syntax/)
 A brief guide to the syntax of deps.js
+
+## [smartcd: how to launch tools locally](/articles/smartcd/)
+Find out how you can launch bem-tools faster right from the command line using smartcd.

@@ -1,8 +1,8 @@
 ## [Full stack quick start](/articles/start-with-project-stub/)
-This article shows you how to develop an online shop web page using BEM principles in CSS, JavaScript and BEMHTML templates.
+This article shows you how to develop an online shop web page using BEM principles in CSS, JavaScript and BEMHTML templates. Статья доступна на английском языке.
 
 ## [What you can borrow from Yandex frontend dev](/articles/yandex-frontend-dev/)
-The article sums up Yandex over 7-year experience in finding solutions for efficient frontend development.
+The article sums up Yandex over 7-year experience in finding solutions for efficient frontend development. Статья доступна на английском языке.
 
 ## [Borschik](/articles/borschik/)
 Borschik — простой, но мощный сборщик файлов текстовых форматов.
@@ -24,3 +24,6 @@ Borschik — простой, но мощный сборщик файлов те�
 
 ## [Синтаксис deps.js](/articles/deps-js-syntax/)
 Краткое руководство по синтаксису deps.js
+
+## [smartcd: локальный запуск инструментов](/articles/smartcd/)
+Узнайте, как с помощью smartcd можно быстрее запустить bem-tools из коммандной строки.
