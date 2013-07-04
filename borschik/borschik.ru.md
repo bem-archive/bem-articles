@@ -352,7 +352,7 @@ new Image().src = 'i/ico/' + iconName + '.png'
 {
     "ico-yandex-png": "i/ico/yandex.png",
     "ico-github-png": "i/ico/github.png",
-    "ico-nodejs-png": "i/ico/nodejs.png",
+    "ico-nodejs-png": "i/ico/nodejs.png"
 }
 ```
 
@@ -386,7 +386,7 @@ $ borschik --tech=js --input=1.js
 borschik.addLinks({
     "ico-yandex-png": "//yandex.st/my-prj/_/wFPs-e1B3wMRud8TzGw7YHjS08I.png",
     "ico-github-png": "//yandex.st/my-prj/_/8ge7HHM3UfpIESgvrpN3bi-Nz0.png",
-    "ico-nodejs-png": "//yandex.st/my-prj/_/1z-l36qqomllvJek_InjAYnHrOE.png",
+    "ico-nodejs-png": "//yandex.st/my-prj/_/1z-l36qqomllvJek_InjAYnHrOE.png"
 })
 var icoName = 'yandex';
 new Image().src = borschik.link('@ico-' + iconName + '-png')
