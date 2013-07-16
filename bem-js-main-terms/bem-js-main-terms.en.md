@@ -277,4 +277,4 @@ More information can be found at [the `i-bem` block's page ](http://bem.github.i
 </div>
 <!--(End) Article author block-->
 
-This article is based on [Vladimir Varankin's](https://github.com/narqo) talk ["BEM and JavaScript: Why Did We Created a JS-framework?"] that was presented at Ya.Subbotnik (Yandex Developer's Day) in Moscow September 8, 2012.
+This article is based on [Vladimir Varankin's](https://github.com/narqo) talk ["BEM and JavaScript: Why Did We Created a JS-framework?"](http://events.yandex.ru/events/yasubbotnik/msk-sep-2012/talks/323/) that was presented at Ya.Subbotnik (Yandex Developer's Day) in Moscow September 8, 2012.
