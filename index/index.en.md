@@ -27,3 +27,6 @@ A brief guide to the syntax of deps.js
 
 ## [smartcd: how to launch tools locally](/articles/smartcd/)
 Find out how you can launch bem-tools faster right from the command line using smartcd.
+
+## [Yandex.Maps API and BEM](/articles/yamapsbem/)
+One of the most frequent cases of Yandex.Maps API usage is the creation of the menu to show on a map different types of POI (geoobject collections). Lets make it according to BEM methodology!
