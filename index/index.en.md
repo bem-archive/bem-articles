@@ -7,10 +7,10 @@ The article sums up Yandex over 7-year experience in finding solutions for effic
 ## [Borschik](/articles/borschik/)
 Borschik is a simple but powerful builder for text-based file formats.
 
-## [JavaScript BEM way: The basics](/articles/bem-js-main-terms/)
+## [JavaScript for BEM: The Main Terms](/articles/bem-js-main-terms/)
 How to write client side JS using i-bem.js from bem-bl library.
 
-## [BEM app with LeafLet and 2GIS API](/articles/firm-card-story/)
+## [BEM app with Leaflet and 2GIS API](/articles/firm-card-story/)
 An example of map service made with BEM.
 
 ## [Hello, BEMHTML!](/articles/bemhtml-intro/)
