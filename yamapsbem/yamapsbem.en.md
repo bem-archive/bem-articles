@@ -145,9 +145,7 @@ For exaple, please, browse [zloylos.github.io/ymapsbem/index-en.html](zloylos.gi
 
 Maybe with BEM methodology the example becomes more complicated, but we get structured and easy-to-support code. Moreover we can easily scale this code. 
 
-Thanks to [Alexander Tarmolov](http://twitter.com/tarmolov) for advice and support. ￼
-
-<img src="http://zloylos.me/other/imgs/ymapsbem/denis.png" alt="">
+Thanks to [Alexander Tarmolov](http://twitter.com/tarmolov) for advice and support.
 
 <!--(Begin) Article author block-->
 <div class="article-author">
