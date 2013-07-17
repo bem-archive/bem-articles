@@ -69,9 +69,6 @@ Watch this for the details: [desktop.bundles/index/index.bemjson.js](https://git
 
 Let’s start from the main block — «map». First of all have to enable the API with all the necessary parameters. We could create a new block «i-API», but it is better to use one block and modifiers. For the block «map» we’ll create modifier «api» with value «ymaps». In our example we’ll use [JavaScript maps API](http://api.yandex.ru/maps/doc/jsapi/), but we also can use [Static maps API](http://api.yandex.ru/maps/doc/staticapi/). It can be realized via modifiers. 
 
-Давайте начнем разработку с главного блока — карты. Прежде всего нужно подключить API с необходимыми опциями. Можно было бы создать отдельный блок i-API, но, кажется, куда удобнее реализовать все это в рамках одного блока, используя модификаторы. Для блока map мы создадим модификатор «api», в котором для начала разместим значение — «ymaps».
-В примере мы будем использовать [динамический API](http://api.yandex.ru/maps/doc/jsapi/), но нужно помнить, что мы можем использовать и [static API](http://api.yandex.ru/maps/doc/staticapi/). Это можно реализовать в рамках модификаторов.
-
 To make our work with the map easier, we have to think about the interface of placemarks adding. We should add a field «geoObjects», where we’ll put [placemarks or placemark collections](http://api.yandex.com/maps/doc/jsapi/2.x/dg/concepts/geoobjects.xml). The following interface is for the placemark:
 
 ````js
@@ -148,7 +145,7 @@ For exaple, please, browse [zloylos.github.io/ymapsbem/index-en.html](zloylos.gi
 
 Maybe with BEM methodology the example becomes more complicated, but we get structured and easy-to-support code. Moreover we can easily scale this code. 
 
-Thanks to Alexander Tarmolov (@tarmolov) for advice and support. ￼
+Thanks to [Alexander Tarmolov](http://twitter.com/tarmolov) for advice and support. ￼
 
 <img src="http://zloylos.me/other/imgs/ymapsbem/denis.png" alt="">
 
