@@ -148,10 +148,28 @@ For exaple, please, browse [zloylos.github.io/ymapsbem/index-en.html](zloylos.gi
 
 Maybe with BEM methodology the example becomes more complicated, but we get structured and easy-to-support code. Moreover we can easily scale this code. 
 
-Thanks to Alexander Tarmolov (@hevil) for advice and support. ￼
+Thanks to Alexander Tarmolov (@tarmolov) for advice and support. ￼
 
 <img src="http://zloylos.me/other/imgs/ymapsbem/denis.png" alt="">
 
-Yandex Maps API Frontend Developer <br>
-http://github.com/zloylos <br>
-http://twitter.com/kandasoft
+<!--(Begin) Article author block-->
+<div class="article-author">
+    <div class="article-author__photo">
+        <img class="article-author__pictures" src="http://zloylos.me/other/imgs/ymapsbem/denis.png" alt="Photo Denis Khananein">
+    </div>
+    <div class="article-author__info">
+        <div class="article-author__row">
+             <span class="article-author__name">Denis Khananein
+        </div>
+        <div class="article-author__row">
+            Yandex Maps API Frontend Developer
+        </div>
+        <div class="article-author__row">
+             <a class="article-author__social-icon b-link" target="_blank" href="http://twitter.com/kandasoft">twitter.com/kandasoft</a>
+        </div>
+        <div class="article-author__row">
+             <a class="article-author__social-icon b-link" target="_blank" href="http://github.com/zloylos">github.com/zloylos</a>
+        </div>
+    </div>
+</div>
+<!--(End) Article author block-->
