@@ -149,7 +149,7 @@ npm install
 
 <img src="http://zloylos.me/other/imgs/ymapsbem/ready.png" alt="">
 
-Спасибо Саше Тармолову (@tarmolov) за ценные советы и помощь.
+Спасибо [Саше Тармолову](http://twitter.com/tarmolov) за ценные советы и помощь.
 
 <!--(Begin) Article author block-->
 <div class="article-author">
