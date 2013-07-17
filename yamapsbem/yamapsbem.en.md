@@ -1,9 +1,9 @@
 # Yandex.Maps API and BEM
 
-One of the most frequent cases of Yandex.Maps API usage is the creation of the menu to show on a map different types of POI (geoobject collections). Such menu helps an end user to chose onle the sertain types of POI to visualize them on a map. Here is an [example](http://dimik.github.com/ymaps/examples/group-menu/menu03.html). But let’s remake this example using BEM methodology. 
+One of the most frequent use cases for the Yandex.Maps API is to create a menu to show different types of PoI (Points of Interest - geoobject collections). Such a menu helps an end user to choose which types of POI to see at any given time, rather than cluttering the map with everything. Here is an [example](http://dimik.github.com/ymaps/examples/group-menu/menu03.html). But let’s remake this example using BEM. 
 
 ## Firsts steps
-BEM developers have already created a project-stub for easy development start.
+The BEM developers have already created a project-stub for easy development start.
 
 ````bash
 git clone https://github.com/bem/project-stub.git shopsList
@@ -23,7 +23,7 @@ We need to create a block «map» for the map itself, block «sidebar» — righ
 
 ## Page description, bemjson coding
 
-As we thought about the page structure and main blocks from the very beginning, now we should just write a json-style code. You can watch the sourcecode for better understanding. And the page structure will be this:
+As we thought about the page structure and main blocks from the very beginning, now we just write it in json-style code. Of course, you can see the sourcecode for better understanding. The page structure will be:
 
 ````
     b-page
@@ -37,7 +37,7 @@ As we thought about the page structure and main blocks from the very beginning, 
 <img src="http://zloylos.me/other/imgs/ymapsbem/index_bemjson.png" alt="">
 
 ￼
-And bemjson:
+And in bemjson:
 ````js
 {
     block: 'b-page',
@@ -63,13 +63,13 @@ And bemjson:
 }
 ````
 
-Watch this for the details: [desktop.bundles/index/index.bemjson.js](https://github.com/zloylos/ymaps-and-bem/blob/master/desktop.bundles/index-en/index-en.bemjson.js).
+Look at the details: [desktop.bundles/index/index.bemjson.js](https://github.com/zloylos/ymaps-and-bem/blob/master/desktop.bundles/index-en/index-en.bemjson.js).
 
 ## Map block
 
-Let’s start from the main block — «map». First of all have to enable the API with all the necessary parameters. We could create a new block «i-API», but it is better to use one block and modifiers. For the block «map» we’ll create modifier «api» with value «ymaps». In our example we’ll use [JavaScript maps API](http://api.yandex.ru/maps/doc/jsapi/), but we also can use [Static maps API](http://api.yandex.ru/maps/doc/staticapi/). It can be realized via modifiers. 
+Let’s start from the main block — «map». First we have to enable the API with all the necessary parameters. We could create a new block «i-API», but it is better to use one block and modifiers. For the block «map» we’ll create a modifier «api» with value «ymaps». In our example we’ll use the [JavaScript maps API](http://api.yandex.ru/maps/doc/jsapi/), but we could also use the [Static maps API](http://api.yandex.ru/maps/doc/staticapi/) with modifiers. 
 
-To make our work with the map easier, we have to think about the interface of placemarks adding. We should add a field «geoObjects», where we’ll put [placemarks or placemark collections](http://api.yandex.com/maps/doc/jsapi/2.x/dg/concepts/geoobjects.xml). The following interface is for the placemark:
+To make our work with the map easier, we have to think about the interface for adding placemarks. We should add a field «geoObjects», where we’ll put [placemarks or placemark collections](http://api.yandex.com/maps/doc/jsapi/2.x/dg/concepts/geoobjects.xml). The following interface is for the placemark:
 
 ````js
 {
@@ -88,7 +88,7 @@ And for placemark collection:
     data: []
 }
 ````
-This code can be used in 90% of use-cases.
+This code can be used in probably nearly all use-cases.
 
 ## Block «menu»
 
@@ -97,7 +97,7 @@ We should make a two-level menu. Create a block «menu» to catch the clicks on 
 — content — container for the items;
 — title — group title.
 
-Than we build an hierarchy by using this menu blocks together. 
+Than we build a hierarchy by using these menu blocks together. 
 
 For example, this is the most simple menu in bemjson:
 ````js
@@ -127,23 +127,23 @@ For example, this is the most simple menu in bemjson:
 
 ## Block «i-geo-controller»
 
-Block-controller which subscribes on the events of the menu-blocks «menuItemClick» and «menuGroupClick», reacts on it and takes some actions on the map.
+This is a block-controller which subscribes to the events of the menu-blocks «menuItemClick» and «menuGroupClick», and reacts to them by taking some actions on the map.
 
 In our example this block has the following tasks: 
 — If there is a click on the placemark, a controller should center the map on this placemark and open the balloon;
 — If there is a click on the group, a controller should show or hide this group. 
 
-Besides to interact with the map properly block-controller have to know, if the map is ready for objects management. So our block «map» will fire event «map-inited» and «i-geo-controller» will listen this event and remember the link to the map.
+Besides interacting with the map properly the block-controller has to know if the map is ready for manipulating objects. So our block «map» will fire the event «map-inited» and «i-geo-controller» will listen for this event and remember the link to the map.
 ￼
 
 <img src="http://zloylos.me/other/imgs/ymapsbem/blocks_scheme-en.png" alt="">
 
 
-For exaple, please, browse [zloylos.github.io/ymapsbem/index-en.html](zloylos.github.io/ymapsbem/index-en.html).
+For example [zloylos.github.io/ymapsbem/index-en.html](zloylos.github.io/ymapsbem/index-en.html).
 
 <img src="http://zloylos.me/other/imgs/ymapsbem/ready-en.png" alt="">
 
-Maybe with BEM methodology the example becomes more complicated, but we get structured and easy-to-support code. Moreover we can easily scale this code. 
+It may seem with BEM methodology this simplistic example is more complicated than it needs to be, but we get structured and easy-to-support code. Moreover we can easily scale this code. 
 
 Thanks to [Alexander Tarmolov](http://twitter.com/tarmolov) for advice and support.
 
