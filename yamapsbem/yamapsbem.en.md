@@ -13,7 +13,7 @@ npm install
 
 Now we can use the project locally. Let’s test that everything works properly. Open the folder and run make, wait some time for project to start and than browse to [localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html). You’ll see something like this:
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/project_stub.png" title="" alt="" border="0"/>
+<img src="http://zloylos.me/other/imgs/ymapsbem/project_stub.png" alt="BEM project stub" border="0"/>
 
 Now we can proceed to the next step.
 
@@ -34,7 +34,7 @@ As we thought about the page structure and main blocks from the very beginning, 
     ======== items
 ````
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/index_bemjson.png" alt="">
+<img src="http://zloylos.me/other/imgs/ymapsbem/index_bemjson.png" alt="Page structure">
 
 ￼
 And in bemjson:
@@ -136,12 +136,12 @@ In our example this block has the following tasks:
 Besides interacting with the map properly the block-controller has to know if the map is ready for manipulating objects. So our block «map» will fire the event «map-inited» and «i-geo-controller» will listen for this event and remember the link to the map.
 ￼
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/blocks_scheme-en.png" alt="">
+<img src="http://zloylos.me/other/imgs/ymapsbem/blocks_scheme-en.png" alt="Scheme of work blocks">
 
 
 For example [zloylos.github.io/ymapsbem/index-en.html](zloylos.github.io/ymapsbem/index-en.html).
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/ready-en.png" alt="">
+<img src="http://zloylos.me/other/imgs/ymapsbem/ready-en.png" alt="Example page">
 
 It may seem with BEM methodology this simplistic example is more complicated than it needs to be, but we get structured and easy-to-support code. Moreover we can easily scale this code. 
 
