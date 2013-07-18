@@ -2,7 +2,7 @@
 
 One of the most frequent use cases for the Yandex.Maps API is to create a menu to show different types of PoI (Points of Interest - geoobject collections). Such a menu helps an end user to choose which types of POI to see at any given time, rather than cluttering the map with everything. Here is an [example](http://dimik.github.com/ymaps/examples/group-menu/menu03.html). But let’s remake this example using BEM. 
 
-## Firsts steps
+## First steps
 The BEM developers have already created a project-stub for easy development start.
 
 ````bash
