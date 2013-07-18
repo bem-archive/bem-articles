@@ -2,7 +2,7 @@
 
 One of the most frequent use cases for the Yandex.Maps API is to create a menu to show different types of PoI (Points of Interest - geoobject collections). Such a menu helps an end user to choose which types of POI to see at any given time, rather than cluttering the map with everything. Here is an [example](http://dimik.github.com/ymaps/examples/group-menu/menu03.html). But let’s remake this example using BEM.
 
-## First steps
+## Firsts steps
 The BEM developers have already created a project-stub for easy development start.
 
 ````bash
@@ -13,7 +13,7 @@ npm install
 
 Now we can use the project locally. Let’s test that everything works properly. Open the folder and run make, wait some time for project to start and than browse to [localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html). You’ll see something like this:
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/project_stub.png" alt="BEM project stub compilled page" border="0"/>
+<img src="http://zloylos.me/other/imgs/ymapsbem/project_stub.png" alt="Defaut page with dummy values for title, header/main/footer content" border="0"/>
 
 Now we can proceed to the next step.
 
@@ -34,7 +34,7 @@ As we thought about the page structure and main blocks from the very beginning, 
     ======== items
 ````
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/index_bemjson.png" alt="Page structure">
+<img src="http://zloylos.me/other/imgs/ymapsbem/index_bemjson.png" alt="[Visual schematic of the above page structure]">
 
 ￼
 And in bemjson:
@@ -136,7 +136,7 @@ In our example this block has the following tasks:
 Besides interacting with the map properly the block-controller has to know if the map is ready for manipulating objects. So our block «map» will fire the event «map-inited» and «i-geo-controller» will listen for this event and remember the link to the map.
 ￼
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/blocks_scheme-en.png" alt="Scheme of work blocks">
+<img src="http://zloylos.me/other/imgs/ymapsbem/blocks_scheme-en.png" alt="[Visual scheme of above event flow]">
 
 
 For example [http://zloylos.github.io/ymapsbem/index-en.html](http://zloylos.github.io/ymapsbem/index-en.html).
