@@ -1,6 +1,6 @@
 # Yandex.Maps API and BEM
 
-One of the most frequent use cases for the Yandex.Maps API is to create a menu to show different types of PoI (Points of Interest - geoobject collections). Such a menu helps an end user to choose which types of POI to see at any given time, rather than cluttering the map with everything. Here is an [example](http://dimik.github.com/ymaps/examples/group-menu/menu03.html). But let’s remake this example using BEM. 
+One of the most frequent use cases for the Yandex.Maps API is to create a menu to show different types of PoI (Points of Interest - geoobject collections). Such a menu helps an end user to choose which types of POI to see at any given time, rather than cluttering the map with everything. Here is an [example](http://dimik.github.com/ymaps/examples/group-menu/menu03.html). But let’s remake this example using BEM.
 
 ## First steps
 The BEM developers have already created a project-stub for easy development start.
@@ -19,7 +19,7 @@ Now we can proceed to the next step.
 
 ## General description of the project
 
-We need to create a block «map» for the map itself, block «sidebar» — right or left column for the block «menu» to show the list of organizations by groups. According to BEM methodology the blocks shouldn’t «know» about each other, so we need to create one more intermediate block, to accept menu clicks and interact with a map. For example, «i-geo-controller». 
+We need to create a block «map» for the map itself, block «sidebar» — right or left column for the block «menu» to show the list of organizations by groups. According to BEM methodology the blocks shouldn’t «know» about each other, so we need to create one more intermediate block, to accept menu clicks and interact with a map. For example, «i-geo-controller».
 
 ## Page description, bemjson coding
 
@@ -67,14 +67,14 @@ Look at the details: [desktop.bundles/index/index.bemjson.js](https://github.com
 
 ## Map block
 
-Let’s start from the main block — «map». First we have to enable the API with all the necessary parameters. We could create a new block «i-API», but it is better to use one block and modifiers. For the block «map» we’ll create a modifier «api» with value «ymaps». In our example we’ll use the [JavaScript maps API](http://api.yandex.ru/maps/doc/jsapi/), but we could also use the [Static maps API](http://api.yandex.ru/maps/doc/staticapi/) with modifiers. 
+Let’s start from the main block — «map». First we have to enable the API with all the necessary parameters. We could create a new block «i-API», but it is better to use one block and modifiers. For the block «map» we’ll create a modifier «api» with value «ymaps». In our example we’ll use the [JavaScript maps API](http://api.yandex.ru/maps/doc/jsapi/), but we could also use the [Static maps API](http://api.yandex.ru/maps/doc/staticapi/) with modifiers.
 
 To make our work with the map easier, we have to think about the interface for adding placemarks. We should add a field «geoObjects», where we’ll put [placemarks or placemark collections](http://api.yandex.com/maps/doc/jsapi/2.x/dg/concepts/geoobjects.xml). The following interface is for the placemark:
 
 ````js
 {
-    coords: [], 
-    properties: {}, 
+    coords: [],
+    properties: {},
     options: {}
 }
 ````
@@ -97,7 +97,7 @@ We should make a two-level menu. Create a block «menu» to catch the clicks on 
 — content — container for the items;
 — title — group title.
 
-Than we build a hierarchy by using these menu blocks together. 
+Than we build a hierarchy by using these menu blocks together.
 
 For example, this is the most simple menu in bemjson:
 ````js
@@ -129,9 +129,9 @@ For example, this is the most simple menu in bemjson:
 
 This is a block-controller which subscribes to the events of the menu-blocks «menuItemClick» and «menuGroupClick», and reacts to them by taking some actions on the map.
 
-In our example this block has the following tasks: 
+In our example this block has the following tasks:
 — If there is a click on the placemark, a controller should center the map on this placemark and open the balloon;
-— If there is a click on the group, a controller should show or hide this group. 
+— If there is a click on the group, a controller should show or hide this group.
 
 Besides interacting with the map properly the block-controller has to know if the map is ready for manipulating objects. So our block «map» will fire the event «map-inited» and «i-geo-controller» will listen for this event and remember the link to the map.
 ￼
@@ -139,11 +139,11 @@ Besides interacting with the map properly the block-controller has to know if th
 <img src="http://zloylos.me/other/imgs/ymapsbem/blocks_scheme-en.png" alt="Scheme of work blocks">
 
 
-For example [zloylos.github.io/ymapsbem/index-en.html](zloylos.github.io/ymapsbem/index-en.html).
+For example [http://zloylos.github.io/ymapsbem/index-en.html](http://zloylos.github.io/ymapsbem/index-en.html).
 
 <img src="http://zloylos.me/other/imgs/ymapsbem/ready-en.png" alt="Example">
 
-It may seem with BEM methodology this simplistic example is more complicated than it needs to be, but we get structured and easy-to-support code. Moreover we can easily scale this code. 
+It may seem with BEM methodology this simplistic example is more complicated than it needs to be, but we get structured and easy-to-support code. Moreover we can easily scale this code.
 
 Thanks to [Alexander Tarmolov](http://twitter.com/tarmolov) for advice and support.
 
