@@ -13,7 +13,7 @@ npm install
 
 Now we can use the project locally. Let’s test that everything works properly. Open the folder and run make, wait some time for project to start and than browse to [localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html). You’ll see something like this:
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/project_stub.png" alt="BEM project stub" border="0"/>
+<img src="http://zloylos.me/other/imgs/ymapsbem/project_stub.png" alt="BEM project stub compilled page" border="0"/>
 
 Now we can proceed to the next step.
 
@@ -141,7 +141,7 @@ Besides interacting with the map properly the block-controller has to know if th
 
 For example [zloylos.github.io/ymapsbem/index-en.html](zloylos.github.io/ymapsbem/index-en.html).
 
-<img src="http://zloylos.me/other/imgs/ymapsbem/ready-en.png" alt="Example page">
+<img src="http://zloylos.me/other/imgs/ymapsbem/ready-en.png" alt="Example">
 
 It may seem with BEM methodology this simplistic example is more complicated than it needs to be, but we get structured and easy-to-support code. Moreover we can easily scale this code. 
 
