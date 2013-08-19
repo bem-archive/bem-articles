@@ -1,5 +1,8 @@
 # The Syntax for `deps.js`
 
+**Update:** We have recently added more information in to Russian text of the article. You can find it [here](https://github.com/bem/bem-articles/blob/master/deps-js-syntax/deps-js-syntax.ru.md). 
+We appreciate your help in translating it into English.
+
 ## The complete implementation of the deps object:
 
 ```js
