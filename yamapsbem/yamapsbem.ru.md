@@ -151,7 +151,7 @@ npm install
 
 Спасибо [Александру Тармолову](http://twitter.com/tarmolov) за ценные советы и помощь.
 
-<!--(Begin) Article author block-->
+<!--(Begin) Article author block
 <div class="article-author">
     <div class="article-author__photo">
         <img class="article-author__pictures" src="http://zloylos.me/other/imgs/ymapsbem/denis.png" alt="Фотография Денис Хананеин">
@@ -171,4 +171,4 @@ npm install
         </div>
     </div>
 </div>
-<!--(End) Article author block-->
+(End) Article author block-->

@@ -1,19 +1,19 @@
-# Borschik
+# borschik
 
-Borschik is a simple but powerful builder for text-based file formats.
+borschik is a simple but powerful builder for text-based file formats.
 
 Its main purpose is the assembly of static files for web projects (CSS, JS, etc.).
 
-Borschik can perform the following operations with files:
+borschik can perform the following operations with files:
 
 * merge
 * modify
 * minify
 
-Borschik is based on a plugin system. Plugins are called "technologies".
+borschik is based on a plugin system. Plugins are called "technologies".
 There are technologies for CSS and JS included, and you can easily extend them or write you own.
 
-Borschik is based on two concepts — `include` and `link`.
+borschik is based on two concepts — `include` and `link`.
 
 * `include`: you have a link to file, which is replaced with the file content.
 * `link`: you have a link to file, the link is transformed.
@@ -22,7 +22,7 @@ Each "technology" defines how to find and process `link` and `include`.
 
 ## Merging files
 ### CSS
-Borschik can find `@import` rules and replace them with the content of the imported files.
+borschik can find `@import` rules and replace them with the content of the imported files.
 
 For example we have two CSS-files
 
@@ -88,8 +88,8 @@ Also all urls in `@import` rules will be processed appropriately.
 
 
 ###JS
-Borschik can merge JS files similarly to the way it does with CSS . But there is no standard method for this in Javascript so
-Borschik uses the following syntax `borschik:include:path/to/fie.js`.
+borschik can merge JS files similarly to the way it does with CSS . But there is no standard method for this in Javascript so
+borschik uses the following syntax `borschik:include:path/to/fie.js`.
 This expression must be in a block comment `/*borschik:include:file.js*/` or string `"borschik:include:file.js"`.
 Comment and string have several semantic.
 
@@ -101,7 +101,7 @@ var prj = {};
 /* borschik:include:components/cookie.js */
 ```
 
-Run Borschik
+Run borschik
 ```sh
 $ borschik --input=page.js --minimize=no
 ```
@@ -130,14 +130,14 @@ prj.STATIC_HOST = "//yandex.st";
 
 ## CSS and JS minification
 
-Borschik minifies CSS with [CSSO](https://github.com/css/csso)
+borschik minifies CSS with [CSSO](https://github.com/css/csso)
 and JS with ([UglifyJS](https://github.com/mishoo/UglifyJS) v1.2).
 
 You can disable minification with `--minimize=no` option. It's enabled by default.
 
 ## Relative links to resources
 
-Borschik can tranform urls in CSS (and other technologies) from relative to absolute, or relative to a different base, according to configuration.
+borschik can tranform urls in CSS (and other technologies) from relative to absolute, or relative to a different base, according to configuration.
 (`.borschik` file in any directory). Configuration relates to the directory where it's located.
 Configuration is more important as higher in file system hierarchy is located.
 
@@ -221,12 +221,12 @@ But uncomfortable, hard to mark all files and there a great risk of making a mis
 2. You add automatically add version info from a Version Control System or modification timestamp.
 It's harder to realize, relieve from manually work but still hard to mark all files
 
-Borschik propose simple but complex solution -
+borschik propose simple but complex solution -
 download files by url not related to version but related to file content, sha1 checksum for example.
 
 Transforming file url to url with hash we called "freeze".
 
-And you can automatize this task with Borschik.
+And you can automatize this task with borschik.
 
 ### .borschik config
 
@@ -244,7 +244,7 @@ File `.borschik` relates to its own directory and all subdirectories.
 
 `freeze_paths` — this key defines which files will be frozen, and where any transformations in the file path of the frozen result.
 
-For example, when Borschik processes CSS file and finds links to images in `i/bg` or `i/ico`,
+For example, when borschik processes CSS file and finds links to images in `i/bg` or `i/ico`,
 borschik freezes these links, changing their path to `../../_` and creates image copy in this path.
 
 Object key — directories whose files will be frozen.
@@ -258,11 +258,11 @@ Examaple
     }
 }
 ```
-Borschik freezes files from directory `i/bg` to `i/bg/_`
+borschik freezes files from directory `i/bg` to `i/bg/_`
 
 **Important note:**
-* Borschik does not freeze all files in directories but only those linked by processed files.
-* Borschik creates a copy of original files in freeze dir whose filename is a checksum of the file content.
+* borschik does not freeze all files in directories but only those linked by processed files.
+* borschik creates a copy of original files in freeze dir whose filename is a checksum of the file content.
 
 ### Freeze links in a CSS file
 For example, we have CSS `css/main.css`
@@ -302,7 +302,7 @@ Here is a regular way to load image in JS
 new Image().src = 'i/bg/main.png'
 ```
 
-To help Borschik find and freeze this image you should mark it with `borschik.link()`
+To help borschik find and freeze this image you should mark it with `borschik.link()`
 ```js
 new Image().src = borschik.link('i/bg/main.png')
 ```
@@ -403,7 +403,7 @@ new Image().src = borschik.link('@ico-' + iconName + '-png')
 ```
 
 ### HTML
-Borschik also can freeze static resources in HTML.
+borschik also can freeze static resources in HTML.
 
 For example,
 ```xml
@@ -419,7 +419,7 @@ For example,
 </html>
 ```
 
-Run Borschik
+Run borschik
 ```sh
 $ borschik --tech=html --input=index.html
 ```
@@ -439,10 +439,10 @@ Result
 ```
 
 ### «Total freeze»
-As you see below Borschik can freeze only those files which are linked from the processed files.
+As you see below borschik can freeze only those files which are linked from the processed files.
 But we may have cases when we have no links, for example dynamic JS modules loading with [RequireJS](http://www.requirejs.org/)
 In this case it will be useful to freeze all files in directory.
-Borschik has a subcommand `borschik freeze` which freezes all files in the specified directory
+borschik has a subcommand `borschik freeze` which freezes all files in the specified directory
 according to the `.borschik` configuration
 ```sh
 $ borschik freeze \
@@ -466,32 +466,10 @@ Result
 Now you can use this JSON in your loader or pass it to RequireJS (with a little transformation).
 
 ### Freeze advantages
-As you see Borschik can freeze urls to static resources in files and processed files as well.
+As you see borschik can freeze urls to static resources in files and processed files as well.
 This is a simple and powerful solution.
 So when you've deployed a new version of your site the browser downloads only modified resources.
 Benefits:
 * reduce static server workload
 * reduce number of resources need to be downloaded by browser
 * speed up page loading
-
-<!--(Begin) Article author block-->
-<div class="article-author">
-    <div class="article-author__photo">
-        <img class="article-author__pictures" src="http://img-fotki.yandex.ru/get/5646/51437929.0/0_bf0f0_64369365_S.png" alt="Photo Alexey Androsov">
-    </div>
-    <div class="article-author__info">
-        <div class="article-author__row">
-             <span class="article-author__name">Alexey Androsov,
-        </div>
-        <div class="article-author__row">
-            Lead Yandex.Mail Frontend Developer
-        </div>
-        <div class="article-author__row">
-             <a class="article-author__social-icon b-link" target="_blank" href="http://twitter.com/doochik">twitter.com/doochik</a>
-        </div>
-        <div class="article-author__row">
-             <a class="article-author__social-icon b-link" target="_blank" href="http://github.com/doochik">github.com/doochik</a>
-        </div>
-    </div>
-</div>
-<!--(End) Article author block-->

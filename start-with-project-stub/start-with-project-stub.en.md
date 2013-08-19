@@ -1,7 +1,7 @@
 # Start developing BEM with project-stub
 
 This article shows you how to develop an [online shop
-web page](http://toivonen.github.com/online-shop-dummy/desktop.bundles/index/index.html)
+web page](http://varya.me/online-shop-dummy/desktop.bundles/index/index.html)
 using BEM principles in CSS, JavaScript and BEMHTML templates. While developing,
 we will use the command-line application: `bem tools` and its subcommand: `bem server`.
 
@@ -162,7 +162,7 @@ blocks.<br/>
 https://gist.github.com/4175640
 
 You can use our [cute BEM
-image](http://toivonen.github.com/online-shop-dummy/desktop.blocks/b-logo/b-logo.png)
+image](http://varya.me/online-shop-dummy/desktop.blocks/b-logo/b-logo.png)
 for the logo, or pick any other image you like :-)
 
 ![Using the block library](http://img-fotki.yandex.ru/get/4119/14441195.26/0_6f0b9_2d1d77a3_XL.jpg "Using the block library")
@@ -471,7 +471,7 @@ https://gist.github.com/4177250
 
 Unfortunately, you need to restart `bem server` after changing the configuration.
 Kill the current process and run `make server` again.<br/>
-Maintainers of BEM tools promise to take away this need to restart in future versions.
+Maintainers of bem-tools promise to take away this need to restart in future versions.
 
 ## Mix for blocks and elements
 Having linked the library you can use the `box` block. It could be just a wrapper,
@@ -669,27 +669,6 @@ It's recommended to run a local project version:
 ```js
     $ ./node_modules/bem/bin/bem make
 ```
-
-<!--(Begin) Article author block-->
-<div class="article-author">
-    <div class="article-author__photo">
-        <img class="article-author__pictures" src="http://img-fotki.yandex.ru/get/5625/51437929.0/0_bf4ad_363d4605_S.png" alt="Photo Varvara Stepanova">
-    </div>
-    <div class="article-author__info">
-        <div class="article-author__row">
-             <span class="article-author__name">Varvara Stepanova,
-        </div>
-        <div class="article-author__row">
-            Front-end engineer working for Yandex in Moscow since 2008& Lead Developer of the UI Framework Team which provides HTML, CSS and Javascript components used to build over 100 different Yandex services. Participates in the BEM project which is open-sourcing technologies behind Yandex UI framework. When she is not coding, she is interested in travel and new cities. Dreams of visiting every country in the world.        </div>
-        <div class="article-author__row">
-             <a class="article-author__social-icon b-link" target="_blank" href="http://twitter.com/toivonens">twitter.com/toivonens</a>
-        </div>
-        <div class="article-author__row">
-             <a class="article-author__social-icon b-link" target="_blank" href="http://github.com/toivonen">github.com/toivonen</a>
-        </div>
-    </div>
-</div>
-<!--(End) Article author block-->
 
 **Credits**<br/>
 Many thanks to [tyv](https://github.com/tyv) and

@@ -147,7 +147,7 @@ It may seem with BEM methodology this simplistic example is more complicated tha
 
 Thanks to [Alexander Tarmolov](http://twitter.com/tarmolov) for advice and support.
 
-<!--(Begin) Article author block-->
+<!--(Begin) Article author block
 <div class="article-author">
     <div class="article-author__photo">
         <img class="article-author__pictures" src="http://zloylos.me/other/imgs/ymapsbem/denis.png" alt="Photo Denis Khananein">
@@ -167,4 +167,4 @@ Thanks to [Alexander Tarmolov](http://twitter.com/tarmolov) for advice and suppo
         </div>
     </div>
 </div>
-<!--(End) Article author block-->
+(End) Article author block-->

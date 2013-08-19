@@ -1008,7 +1008,7 @@ what you've done with CSS before.
 
 Each line in the file refers to a particular block.
 
-##CSS and JavaScript flattening with Borschik
+##CSS and JavaScript flattening with borschik
 
 Don't be confused with an unfamiliar `include` instruction. Of course, we are
 not going to supply a browser with such a strange file but flatten each include.
@@ -1026,7 +1026,7 @@ Here you can see here that including line for the menu turned into the content
 of the file.
 
 You can do such inlining magic automatically with the tool called
-[Borschik](https://github.com/veged/borschik).
+[borschik](https://github.com/veged/borschik).
 
 Besides flattening JavaScript, it does the same with CSS files of imports.
 
@@ -1297,7 +1297,7 @@ So, this is a cool opportunity to touch BEM stack.
 
 Besides, BEM team also produces many very nice development tools.
 
-[Borschik](https://github.com/veged/borschik) has already been introduced.
+[borschik](https://github.com/veged/borschik) has already been introduced.
 
 Also, you might be interested in [CSSO](http://bem.info/tools/csso/), which is
 CSS optimizer unlike others. It does usual minification, but what is more,
@@ -1351,7 +1351,7 @@ Please address your questions to the comminuty asking in [BEM Facebook
 group](http://www.facebook.com/groups/209713935765634/) or in Twitter
 [@bem_tw](https://twitter.com/bem_tw).
 
-<!--(Begin) Article author block-->
+<!--(Begin) Article author block
 <div class="article-author">
     <div class="article-author__photo">
         <img class="article-author__pictures" src="http://img-fotki.yandex.ru/get/5625/51437929.0/0_bf4ad_363d4605_S.png" alt="Photo Varvara Stepanova">
@@ -1370,6 +1370,6 @@ group](http://www.facebook.com/groups/209713935765634/) or in Twitter
         </div>
     </div>
 </div>
-<!--(End) Article author block-->
+(End) Article author block-->
 
 This information is also available as a talk "[BEM. What you can borrow from Yandex frontend dev](https://vimeo.com/53219242)" given at [WebConf Riga](http://webconf.lv/) at 10th November 2012.

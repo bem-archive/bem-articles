@@ -291,26 +291,4 @@ DOM-представления, использует идею делигиров
 Об этом можно прочесть на [странице блока
 i-bem](http://bem.github.com/bem-bl/sets/common-desktop/i-bem/i-bem.ru.html).
 
-<!--(Begin) Article author block-->
-<div class="article-author">
-    <div class="article-author__photo">
-        <img class="article-author__pictures" src="http://img-fotki.yandex.ru/get/5625/51437929.0/0_bf4ad_363d4605_S.png" alt="Фотография Варвары Степановой">
-    </div>
-    <div class="article-author__info">
-        <div class="article-author__row">
-             <span class="article-author__name">Варя Степанова, Яндекс.
-        </div>
-        <div class="article-author__row">
-            Работает в компании с 2008 года ведущим разработчиком интерфейсов. Руководит группой разработки frontend фреймворка Яндекса, реализованного по методологии БЭМ. Распространяет информацию о БЭМ как в России, так и за рубежом. В свободное от написания кода время любит путешествовать и мечтает побывать во всех странах мира.
-        </div>
-        <div class="article-author__row">
-             <a class="article-author__social-icon b-link" target="_blank" href="http://twitter.com/toivonens">twitter.com/toivonens</a>
-        </div>
-        <div class="article-author__row">
-             <a class="article-author__social-icon b-link" target="_blank" href="http://github.com/toivonen">github.com/toivonen</a>
-        </div>
-    </div>
-</div>
-<!--(End) Article author block-->
-
 Статья подготовлена по материалам выступления [Владимира Варанкина](https://github.com/narqo) «[БЭМ и JavaScript: Зачем мы написали JS-фреймворк?](http://events.yandex.ru/events/yasubbotnik/msk-sep-2012/talks/323/)» на Я.Субботнике в Москве 8 сентября 2012.

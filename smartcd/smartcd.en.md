@@ -65,27 +65,5 @@ smartcd: running /Users/arikon/.smartcd/scripts/Users/arikon/projects/bem-www/ba
 
 If you are using `zsh` with the option `autocd` enabled, uncomment the line `smartcd setup prompt-hook` in `~/.smartcd_config`.
 
-<!--(Begin) Article author block-->
-<div class="article-author">
-    <div class="article-author__photo">
-        <img class="article-author__pictures" src="http://www.gravatar.com/avatar/6fa6da3a6927ded01bac659b5f1b4281.png?s=130" alt="Фотография Алексея Андросова">
-    </div>
-    <div class="article-author__info">
-        <div class="article-author__row">
-             <span class="article-author__name">Sergey Belov,
-        </div>
-        <div class="article-author__row">
-          Yandex DevTools Group Team Lead 
-        </div>
-        <div class="article-author__row">
-             <a class="article-author__social-icon b-link" target="_blank" href="http://twitter.com/arik0n">twitter.com/arik0n</a>
-        </div>
-        <div class="article-author__row">
-             <a class="article-author__social-icon b-link" target="_blank" href="http://github.com/arikon">github.com/arikon</a>
-        </div>
-    </div>
-</div>
-<!--(End) Article author block-->
-
 This article is based on: «[Using locally installed tools from the command line](http://clubs.ya.ru/bem/replies.xml?item_no=2231)» (Russian only) posted at Ya.ru.
 
