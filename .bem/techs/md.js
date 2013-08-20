@@ -11,7 +11,7 @@ exports.techMixin = {
 
         return this.getLangs()
             .map(function(lang) {
-                return lang + 'desc.md';
+                return lang + 'md';
             });
 
     }
