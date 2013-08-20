@@ -10,17 +10,21 @@ we will use the command-line application: `bem tools` and its subcommand: `bem s
 ## Tools
 You need a command-line toolkit [bem tools](https://github.com/bem/bem-tools) to
 begin with the project.
-Follow the installation steps in the corresponding repository.
+Follow the installation steps in the corresponding repository.<br/>
+This tutorial is best to follow with `0.5.21` version of `bem tools`.
 
 ## Start with a project repository
 The easiest way to start is to copy a similar project repository with suitable
 structure.<br/>
 We intend to use the full power of BEM technologies, so this
-[project-stub](https://github.com/bem/project-stub) will suit you just fine.
+[project-stub](https://github.com/bem/project-stub) will suit you just
+fine. The article is actual for the `5ac5d2d2567ca6d52d82f95b219bca6f49ef5cc4`
+revision.
 
 ```js
     $ git clone git://github.com/bem/project-stub.git my-pretty-project
     $ cd my-pretty-project/
+    $ git reset --hard 5ac5d2d2567ca6d52d82f95b219bca6f49ef5cc4
     $ rm -rf .git
     $ git init
 ```
