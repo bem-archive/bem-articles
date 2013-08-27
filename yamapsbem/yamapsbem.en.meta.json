@@ -1,0 +1,14 @@
+{
+    "title": "Yandex.Maps API and BEM",
+    "createDate": "2013-08-19",
+    "editDate": "2013-08-21",
+    "summary": "One of the most frequent cases of Yandex.Maps API usage is the creation of the menu to show on a map different types of POI (geoobject collections). Lets make it according to BEM methodology!",
+    "thumbnail": "",
+    "author": "Andrey Kuznetsov",
+    "tags": ["i-bem", "JavaScript"],
+    "category": ["article"],
+    "translator": "Andrey Kuznetsov",
+    "url": "/articles/yamapsbem/",
+    "type": "article",
+    "slug": ""
+}

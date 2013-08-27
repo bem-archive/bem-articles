@@ -1,0 +1,14 @@
+{
+    "title": "Full stack quick start",
+    "createDate": "2013-08-19",
+    "editDate": "2013-08-21",
+    "summary": "This article shows you how to develop an online shop web page using BEM principles in CSS, JavaScript and BEMHTML templates. Статья доступна на английском языке.",
+    "thumbnail": "",
+    "author": "Андрей Кузнецов",
+    "tags": ["i-bem", "JavaScript"],
+    "category": ["article"],
+    "translator": "Андрей Кузнецов",
+    "url": "/articles/start-with-project-stub/",
+    "type": "article",
+    "slug": ""
+}
