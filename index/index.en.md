@@ -22,8 +22,10 @@ This is BEMHTML reference manual.
 ## [BEMHTML: template engine for BEM](/articles/bemhtml-rationale/)
 BEMHTML rationale.
 
-## [Syntax deps.js](/articles/deps-js-syntax/)
-A brief guide to the syntax of deps.js
+## [deps.js — a technology to declare dependencies in BEM](/articles/deps-js-syntax/)
+Instead of describing dependencies for the whole project at once we created a technology called deps.js that allows us to declare dependencies for each block according to BEM methodology. This makes easier for us to re-use blocks from project to project.
+
+Read the details about the syntax and building mechanics in our new article with examples of code.
 
 ## [smartcd: how to launch tools locally](/articles/smartcd/)
 Find out how you can launch bem-tools faster right from the command line using smartcd.
