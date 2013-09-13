@@ -836,7 +836,7 @@ bad should happen since the blocks are independent.
 
 ## BEM
 
-<img src="http://bem.info/bundles-desktop/index/blocks/logo/_type/logo_type_main.png"/>
+<img src="http://img-fotki.yandex.ru/get/9558/221798411.0/0_b9ee0_87aa2593_M.png"/>
 
 Now, that the three terms are introduced, I am happy to present you BEM methodology.
 You've just learnt its parts related to independent CSS blocks.
