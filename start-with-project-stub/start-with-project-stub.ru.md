@@ -20,19 +20,18 @@ i-bem.js и с использованием шаблонизатора BEMHTML. 
 Чтобы пройти по всем шагам этого мануала, вам нужно установить [bem tools](https://github.com/bem/bem-tools).
 Это набор инструментов с command line интерфейсом для оперирования БЭМ-сущностями
 и сборки проекта. Инструкция по установке есть в описании репозитория.<br/>
-На момент написания этой статьи была актуальна версия `0.5.21`.
+На момент написания этой статьи была актуальна версия `0.5.33`.
 
 ## Создание собственного репозитория проекта
 Проще всего создать свой проект простым копированием существующего репозитория с
 подходящей структурой.<br/>
 Для проекта с использованием полного стека БЭМ подойдёт репозиторий
 [project-stub](https://github.com/bem/project-stub). На момент напиания
-статьи использовалась ревизия `5ac5d2d2567ca6d52d82f95b219bca6f49ef5cc4`.
+статьи использовалась ветка `start-project-stub`.
 
 ```js
-    $ git clone git://github.com/bem/project-stub.git my-pretty-project
+    $ git clone git://github.com/bem/project-stub.git -b start-project-stub my-pretty-project
     $ cd my-pretty-project/
-    $ git reset --hard 5ac5d2d2567ca6d52d82f95b219bca6f49ef5cc4
     $ rm -rf .git
     $ git init
 ```
