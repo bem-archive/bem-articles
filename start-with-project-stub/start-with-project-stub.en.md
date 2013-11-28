@@ -671,6 +671,4 @@ It's recommended to run a local project version:
 ```
 
 **Credits**<br/>
-Many thanks to [tyv](https://github.com/tyv) and
-[gela-d](https://github.com/gela-d) for cute HTML/CSS markup,
-and to [ingdir](https://github.com/ingdir) for his help with the English version.
+Author thanks [tyv](https://github.com/tyv) and [gela-d](https://github.com/gela-d) for cute HTML/CSS markup, and [ingdir](https://github.com/ingdir) for his help with the English version.
