@@ -105,6 +105,30 @@ To declare dependencies on BEM entities which were missing during a build proces
 ``noDeps`` cancels dependencies on lower redefinition levels, preserving them only to the level the ``noDeps`` property is defined upon.
 For example, if you use two different block libraries which have blocks with the same name, you can cancel a dependency from one block on the current level and add another dependency for the second block on the current and all subsequent levels.
 
+As a shortcut for construction `{ block : 'b1' }` (when no additional field used), one can use just string literal `'b1'`. For example:
+
+```js
+({
+    mustDeps : [
+        { block : 'b1' },
+        { block : 'b2' },
+        { block : 'b3', mods : { m1 : 'v1' } }
+    ]
+})
+```
+
+can be written like this:
+
+```js
+({
+    mustDeps : [
+        'b1',
+        'b2',
+        { block : 'b3', mods : { m1 : 'v1' } }
+    ]
+})
+```
+
 ## Build details
 
 In BEM methodology, deps.js is a technology and, as such, it conforms to unified technology building rules. 
